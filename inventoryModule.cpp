@@ -7,7 +7,7 @@ void inventoryMenu()
 
   do
   {
-    cout << "Serendipity Book Store" << endl;
+    cout << "Serendipity Book Sellers" << endl;
     cout << "Reports Menu" << endl;
 
 

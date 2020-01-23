@@ -7,7 +7,7 @@ int mainMenu()
 
   system("clear");
 
-  cout << "Serendipity Book Store" << endl;
+  cout << "Serendipity Book Sellers" << endl;
   cout << endl << endl;
   cout << "Main Menu" << endl;
   cout << "1. Cashier Module" << endl;

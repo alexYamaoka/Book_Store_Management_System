@@ -25,9 +25,11 @@ int main()
         break;
 
       case 3:
+        reportsMenu();
         break;
 
       case 4:
+        cout << "Exiting Program" << endl;
         break;
 
       default:
@@ -35,10 +37,6 @@ int main()
     }
 
   }while(selection != 4);
-
-
-
-
 
 
   return 0;

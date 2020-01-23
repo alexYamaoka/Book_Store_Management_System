@@ -8,7 +8,7 @@ void cashierMenu()
 
   do
   {
-    cout << "Serendipity Book Store" << endl;
+    cout << "Serendipity Book Sellers" << endl;
     cout << "Cashier Menu" << endl;
 
 
