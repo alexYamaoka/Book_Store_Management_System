@@ -8,18 +8,22 @@
 #include "inventoryModule.h"
 #include "reportsModule.h"
 #include "book.h"
+#include "avlTree.h"
+#include "testCase.h"
 using namespace std;
 
-void readInDataBase(list<Book>& bookList);
-void testReadInDataBase(list<Book> bookList);
+void readInDataBase(list<Book>& bookList, AvlTree& bookTree);
+
+
 
 int main()
 {
   list<Book> bookList;
+  AvlTree bookTree;
 
-  readInDataBase(bookList);
-
-  testReadInDataBase(bookList);
+  readInDataBase(bookList, bookTree);
+  testBookList(bookList);
+  testBookTree(bookTree);
 
 
   int selection = 0;
@@ -58,7 +62,7 @@ int main()
 
 
 
-void readInDataBase(list<Book>& bookList)
+void readInDataBase(list<Book>& bookList, AvlTree& bookTree)
 {
   ifstream fin;
 
@@ -99,6 +103,7 @@ void readInDataBase(list<Book>& bookList)
 
   bookPtr = new Book(bookTitle, isbn, author, publisher, dateAdded, quantityOnHand, wholesaleCost, retailPrice);
   bookList.push_back(*bookPtr);
+  bookTree.insert(*bookPtr);
   Book::incrementBookCount();
   count++;
 
@@ -123,24 +128,10 @@ void readInDataBase(list<Book>& bookList)
     {
       bookPtr = new Book(bookTitle, isbn, author, publisher, dateAdded, quantityOnHand, wholesaleCost, retailPrice);
       bookList.push_back(*bookPtr);
+      bookTree.insert(*bookPtr);
       Book::incrementBookCount();
       count++;
     }
   }
 
-}
-
-
-void testReadInDataBase(list<Book> bookList)
-{
-  system("clear");
-  cout << "Testing readInDataBase function" << endl << endl;
-  list<Book>::iterator it;
-
-
-  for (it = bookList.begin(); it != bookList.end(); ++it)
-  {
-    (*it).print();
-    cout << endl << endl;
-  }
 }

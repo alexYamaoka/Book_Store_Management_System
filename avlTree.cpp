@@ -248,7 +248,11 @@ void AvlTree::inOrderTraversal(NodeType *p)
   if (p != nullptr)
   {
     inOrderTraversal(p->leftLink);
+<<<<<<< HEAD
     cout << p->info << endl << endl;
+=======
+    cout << p->info.getBookTitle() << endl << endl;
+>>>>>>> feature-tree
     inOrderTraversal(p->rightLink);
   }
 }
@@ -265,7 +269,11 @@ void AvlTree::preOrderTraversal(NodeType *p)
 {
   if (p != nullptr)
   {
+<<<<<<< HEAD
     cout << p->info << endl << endl;
+=======
+    cout << p->info.getBookTitle() << endl << endl;
+>>>>>>> feature-tree
     preOrderTraversal(p->leftLink);
     preOrderTraversal(p->rightLink);
   }
@@ -286,7 +294,11 @@ void AvlTree::postOrderTraversal(NodeType *p)
   {
     postOrderTraversal(p->leftLink);
     postOrderTraversal(p->rightLink);
+<<<<<<< HEAD
     cout << p->info << endl << endl;
+=======
+    cout << p->info.getBookTitle() << endl << endl;
+>>>>>>> feature-tree
   }
 }
 

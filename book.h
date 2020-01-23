@@ -55,6 +55,8 @@ public:
   bool operator == (const Book& otherBook) const;
   bool operator != (const Book& otherBook) const;
   bool operator >= (const Book& otherBook) const;
+  bool operator > (const Book& otherBook) const;
+  bool operator < (const Book& otherBook) const;
 
 
 };
