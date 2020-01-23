@@ -34,6 +34,12 @@ Book::Book(string bookTitle, string isbn, string author, string publisher, strin
   incrementBookCount();
 }
 
+Book::Book(string bookTitle, string isbn)
+    :Book(bookTitle, isbn, "Not Set", "Not Set", "Not Set", 0, 0, 0)
+{
+  // create book with title and isbn
+}
+
 
 Book::Book()
     :Book("Not Set", "Not Set", "Not Set", "Not Set", "Not Set", 0, 0, 0)
@@ -173,7 +179,8 @@ ostream& operator << (ostream& osObject, const Book& book)
 
 bool Book::operator == (const Book& otherBook) const
 {
-  return bookTitle == otherBook.bookTitle;
+
+  return (bookTitle == otherBook.bookTitle || isbn == otherBook.isbn);
 }
 
 bool Book::operator != (const Book& otherBook) const

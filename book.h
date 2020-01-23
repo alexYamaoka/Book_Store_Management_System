@@ -28,6 +28,7 @@ public:
   static int getBookCount();
 
   Book();
+  Book(string bookTitle, string isbn);
   Book(string bookTitle, string isbn, string author, string publisher, string dateAdded, int quantityOnHand, double wholesaleCost, double retailCost);
   Book(const Book& otherBook);
 

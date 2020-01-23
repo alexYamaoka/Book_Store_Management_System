@@ -2,10 +2,16 @@
 #define INVENTORYMODULE_H
 
 #include <iostream>
+#include <list>
+#include <iterator>
+#include "book.h"
+#include  "sequentialSearchList.h"
+#include "avlTree.h"
+
 using namespace std;
 
-void inventoryMenu();
-void searchBook();
+void inventoryMenu(list<Book>& bookList, AvlTree& bookTree);
+void searchBook(list<Book>& bookList, AvlTree& bookTree);
 void addBook();
 void editBook();
 void deleteBook();

@@ -1,7 +1,9 @@
 #include "inventoryModule.h"
+
+
 using namespace std;
 
-void inventoryMenu()
+void inventoryMenu(list<Book>& bookList, AvlTree& bookTree)
 {
   int selection = 0;
 
@@ -38,7 +40,7 @@ void inventoryMenu()
     switch (selection)
     {
       case 1:
-        searchBook();
+        searchBook(bookList, bookTree);
         break;
 
       case 2:
@@ -71,12 +73,47 @@ void inventoryMenu()
 
 
 
-void searchBook()
+void searchBook(list<Book>& bookList, AvlTree& bookTree)
 {
+  string toSearch = "";
+
   system("clear");
   cout << "Serendipity Book Sellers" << endl << endl;
 
   cout << "Search Book" << endl;
+
+  cout << "Enter Book Title or ISBN(x-xxxx-xxxx-x): ";
+  getline(cin, toSearch, '\n');
+
+  Book* tempBook = new Book(toSearch, toSearch);
+
+
+  // ***************** List data structure **********************
+  try
+  {
+    sequentialSearch(bookList, *tempBook);
+  }
+  catch(string ex)
+  {
+    cout << ex << endl;
+  }
+
+
+
+  // ***************** AVL Tree data structure **********************
+  try
+  {
+    bookTree.search(*tempBook);
+  }
+  catch(string ex)
+  {
+    cout << ex << endl;
+  }
+
+
+
+
+
 
 
   cin.ignore(1000, '\n');

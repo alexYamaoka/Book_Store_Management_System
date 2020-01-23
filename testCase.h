@@ -7,8 +7,6 @@
 #include <iterator>
 #include <chrono>
 #include <iomanip>
-
-
 #include "book.h"
 #include "avlTree.h"
 #include "sequentialSearchList.h"
@@ -33,7 +31,7 @@ void testBookList(list<Book>& bookList)
   cout << "List Sequential Search" << endl;
   cout << "*********************************************" << endl << endl;
 
-  Book* searchItem = new Book("Men in Black: The Grazer Conspiracy", "0-7394-0980-8", "Dean Wesley Smith", "TBD", "05/13/2018", 15, 8.69, 11.3);
+  Book* searchItem = new Book("Men in Black: The Grazer Conspiracy", "0-7394-0980-8");
 
 
   auto start = std::chrono::high_resolution_clock::now();
@@ -50,7 +48,7 @@ void testBookList(list<Book>& bookList)
   cout << "Elapsed time: " << fixed << setprecision(12) << elapsed.count()/1000 << " ms\n";
 
 
-  Book* tempBook = new Book("hi", "yo", "no", "r", "to", 4, 3, 2);
+  Book* tempBook = new Book("hi", "yo");
   start = std::chrono::high_resolution_clock::now();
   try
   {
@@ -91,7 +89,9 @@ void testBookTree(AvlTree& bookTree)
 
   cout << "AVL Tree Search" << endl;
   cout << "*********************************************" << endl << endl;
-  Book* searchItem = new Book("Men in Black: The Grazer Conspiracy", "0-7394-0980-8", "Dean Wesley Smith", "TBD", "05/13/2018", 15, 8.69, 11.3);
+
+  cout << "For an Existing Book" << endl;
+  Book* searchItem = new Book("Men in Black: The Grazer Conspiracy", "0-7394-0980-8");
 
 
   auto start = std::chrono::high_resolution_clock::now();
@@ -109,8 +109,8 @@ void testBookTree(AvlTree& bookTree)
 
 
 
-
-  Book* tempBook = new Book("hi", "yo", "no", "r", "to", 4, 3, 2);
+  cout << "For a Non Existing Book" << endl;
+  Book* tempBook = new Book("hi", "yo");
   start = std::chrono::high_resolution_clock::now();
   try
   {

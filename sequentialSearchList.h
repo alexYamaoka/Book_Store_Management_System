@@ -1,5 +1,5 @@
-#ifndef SEARCHALGORITHMS_H
-#define SEARCHALGORITHMS_H
+#ifndef SEQUENTIALSEARCHLIST_H
+#define SEQUENTIALSEARCHLIST_H
 
 #include <iostream>
 #include <list>
@@ -9,26 +9,8 @@
 
 using namespace std;
 
-void sequentialSearch(list<Book>& bookList, const Book& searchItem) throw(string)
-{
-  list<Book>::iterator it;
+Book sequentialSearch(list<Book>& bookList, const Book& searchItem) throw(string);
 
-
-  for (it = bookList.begin(); it != bookList.end(); ++it)
-  {
-    if (*it == searchItem)
-    {
-      cout << "Item Found" << endl;
-      cout << (*it).getBookTitle() << endl;
-      return;
-    }
-
-  }
-
-  string ex = "Item Not Found";
-  throw (ex);
-
-}
 
 
 

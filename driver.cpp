@@ -10,6 +10,7 @@
 #include "book.h"
 #include "avlTree.h"
 #include "testCase.h"
+
 using namespace std;
 
 void readInDataBase(list<Book>& bookList, AvlTree& bookTree);
@@ -25,7 +26,7 @@ int main()
   testBookList(bookList);
   testBookTree(bookTree);
 
-  
+
 
   int selection = 0;
 
@@ -36,15 +37,15 @@ int main()
     switch(selection)
     {
       case 1:
-        cashierMenu();
+        //cashierMenu();
         break;
 
       case 2:
-        inventoryMenu();
+        inventoryMenu(bookList, bookTree);
         break;
 
       case 3:
-        reportsMenu();
+        //reportsMenu();
         break;
 
       case 4:
