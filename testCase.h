@@ -6,6 +6,7 @@
 #include <list>
 #include <iterator>
 #include <chrono>
+#include <iomanip>
 
 
 #include "book.h"
@@ -13,7 +14,7 @@
 #include "sequentialSearchList.h"
 using namespace std;
 
-void testBookList(list<Book> bookList)
+void testBookList(list<Book>& bookList)
 {
   system("clear");
   cout << "Testing  STL List data structure function" << endl;
@@ -29,32 +30,49 @@ void testBookList(list<Book> bookList)
   cout << endl << endl;
 
 
-  cout << "Binary Search Linked List" << endl;
+  cout << "List Sequential Search" << endl;
   cout << "*********************************************" << endl << endl;
 
-  Book searchItem = new Book("Men in Black: The Grazer Conspiracy", "0-7394-0980-8", "Dean Wesley Smith", "TBD", "05/13/2018", 15, 8.69, 11.3);
+  Book* searchItem = new Book("Men in Black: The Grazer Conspiracy", "0-7394-0980-8", "Dean Wesley Smith", "TBD", "05/13/2018", 15, 8.69, 11.3);
+
 
   auto start = std::chrono::high_resolution_clock::now();
-
-
-  Book* bookRetrieved = sequntialSearch(bookList, searchItem);
-
-
-
-  auto finish = std::chrono::high_resolution_clock::now();
-
-  if (bookRetrieved != nullptr)
+  try
   {
-    bookRetrieved.print();
+    sequentialSearch(bookList, *searchItem);
   }
-
-
-
-
-
-
+  catch(string ex)
+  {
+    cout << ex << endl;
+  }
+  auto finish = std::chrono::high_resolution_clock::now();
   chrono::duration<double> elapsed = finish - start;
-  cout << "Elapsed time: " << elapsed.count() << " s\n";
+  cout << "Elapsed time: " << fixed << setprecision(12) << elapsed.count()/1000 << " ms\n";
+
+
+  Book* tempBook = new Book("hi", "yo", "no", "r", "to", 4, 3, 2);
+  start = std::chrono::high_resolution_clock::now();
+  try
+  {
+    sequentialSearch(bookList, *tempBook);
+  }
+  catch(string ex)
+  {
+    cout << ex << endl;
+  }
+  finish = std::chrono::high_resolution_clock::now();
+  elapsed = finish - start;
+  cout << "Elapsed time: " << fixed << setprecision(12) << elapsed.count()/1000 << " ms\n";
+
+
+
+
+
+
+
+
+
+
 
   cin.ignore(1000, '\n');
   cin.get();
@@ -68,6 +86,44 @@ void testBookTree(AvlTree& bookTree)
   cout << "*********************************************" << endl << endl;
   bookTree.inOrderTraversal();
   cout << endl << endl;
+
+
+
+  cout << "AVL Tree Search" << endl;
+  cout << "*********************************************" << endl << endl;
+  Book* searchItem = new Book("Men in Black: The Grazer Conspiracy", "0-7394-0980-8", "Dean Wesley Smith", "TBD", "05/13/2018", 15, 8.69, 11.3);
+
+
+  auto start = std::chrono::high_resolution_clock::now();
+  try
+  {
+    bookTree.search(*searchItem);
+  }
+  catch(string ex)
+  {
+    cout << ex << endl;
+  }
+  auto finish = std::chrono::high_resolution_clock::now();
+  chrono::duration<double> elapsed = finish - start;
+  cout << "Elapsed time: " << fixed << setprecision(12) << elapsed.count()/1000 << " ms\n";
+
+
+
+
+  Book* tempBook = new Book("hi", "yo", "no", "r", "to", 4, 3, 2);
+  start = std::chrono::high_resolution_clock::now();
+  try
+  {
+    bookTree.search(*tempBook);
+  }
+  catch(string ex)
+  {
+    cout << ex << endl;
+  }
+  finish = std::chrono::high_resolution_clock::now();
+  elapsed = finish - start;
+  cout << "Elapsed time: " << fixed << setprecision(12) << elapsed.count()/1000 << " ms\n";
+
 
   cin.ignore(1000, '\n');
   cin.get();

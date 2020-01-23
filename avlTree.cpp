@@ -248,7 +248,7 @@ void AvlTree::inOrderTraversal(NodeType *p)
   if (p != nullptr)
   {
     inOrderTraversal(p->leftLink);
-    cout << p->info.getBookTitle() << endl << endl;
+    cout << p->info.getBookTitle() << endl;
     inOrderTraversal(p->rightLink);
   }
 }
@@ -265,7 +265,7 @@ void AvlTree::preOrderTraversal(NodeType *p)
 {
   if (p != nullptr)
   {
-    cout << p->info.getBookTitle() << endl << endl;
+    cout << p->info.getBookTitle() << endl;
     preOrderTraversal(p->leftLink);
     preOrderTraversal(p->rightLink);
   }
@@ -286,7 +286,7 @@ void AvlTree::postOrderTraversal(NodeType *p)
   {
     postOrderTraversal(p->leftLink);
     postOrderTraversal(p->rightLink);
-    cout << p->info.getBookTitle() << endl << endl;
+    cout << p->info.getBookTitle() << endl;
   }
 }
 
@@ -509,7 +509,7 @@ bool AvlTree::isEmpty() const
 
 
 
-bool AvlTree::search(const Book& searchItem)
+Book AvlTree::search(const Book& searchItem)
 {
   NodeType *current;
   bool found = false;
@@ -527,6 +527,7 @@ bool AvlTree::search(const Book& searchItem)
       if (current->info == searchItem)
       {
         found = true;
+        return current->info;
       }
       else if (current->info > searchItem)
       {
@@ -539,7 +540,10 @@ bool AvlTree::search(const Book& searchItem)
     }
   }
 
-  return found;
+
+
+  string ex = "Item Not Found";
+  throw (ex);
 }
 
 

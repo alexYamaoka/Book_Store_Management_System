@@ -71,7 +71,7 @@ public:
   int getTreeNodeCount() const;
   int getTreeLeavesCount() const;
 
-  bool search(const Book& searchItem);
+  Book search(const Book& searchItem);
   void destroyTree();
   void print();
 
