@@ -19,8 +19,10 @@ int mainMenu()
   cout << "Enter Selection: ";
   cin >> selection;
 
-  while (selection < 1 || selection > 4)
+  while (selection < 1 || selection > 4 || cin.fail())
   {
+    cin.clear();
+    cin.ignore(1000, '\n');
     cout << "Please enter selection (1 - 4): ";
     cin >> selection;
   }

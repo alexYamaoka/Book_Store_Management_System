@@ -18,12 +18,13 @@ private:
   double wholesaleCost;
   double retailPrice;
 
-  static void incrementBookCount();
-  static void decrementBookCount();
+
 
   friend ostream& operator << (ostream& osObject, const Book& book);
 
 public:
+  static void incrementBookCount();
+  static void decrementBookCount();
   static int getBookCount();
 
   Book();

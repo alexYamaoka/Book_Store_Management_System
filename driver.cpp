@@ -1,6 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <list>
+#include <iterator>
 #include "mainMenu.h"
 #include "cashierModule.h"
 #include "inventoryModule.h"
@@ -8,10 +10,18 @@
 #include "book.h"
 using namespace std;
 
-void readInDataBase();
+void readInDataBase(list<Book>& bookList);
+void testReadInDataBase(list<Book> bookList);
 
 int main()
 {
+  list<Book> bookList;
+
+  readInDataBase(bookList);
+
+  testReadInDataBase(bookList);
+
+
   int selection = 0;
 
   do
@@ -47,9 +57,10 @@ int main()
 }
 
 
-void readInDataBase()
+
+void readInDataBase(list<Book>& bookList)
 {
-  istream fin;
+  ifstream fin;
 
   string bookTitle = "Not Set";
   string isbn = "Not Set";
@@ -80,14 +91,18 @@ void readInDataBase()
   getline(fin, isbn, '\n');
   getline(fin, author, '\n');
   getline(fin, publisher, '\n');
-  getine(fin, dateAdded, '\n');
+  getline(fin, dateAdded, '\n');
   fin >> quantityOnHand;
   fin >> wholesaleCost;
   fin >> retailPrice;
 
+
   bookPtr = new Book(bookTitle, isbn, author, publisher, dateAdded, quantityOnHand, wholesaleCost, retailPrice);
+  bookList.push_back(*bookPtr);
   Book::incrementBookCount();
   count++;
+
+
 
 
   while (!fin.fail())
@@ -97,18 +112,35 @@ void readInDataBase()
     getline(fin, isbn, '\n');
     getline(fin, author, '\n');
     getline(fin, publisher, '\n');
-    getine(fin, dateAdded, '\n');
+    getline(fin, dateAdded, '\n');
     fin >> quantityOnHand;
     fin >> wholesaleCost;
     fin >> retailPrice;
 
+
+
     if (!fin.fail())
     {
       bookPtr = new Book(bookTitle, isbn, author, publisher, dateAdded, quantityOnHand, wholesaleCost, retailPrice);
+      bookList.push_back(*bookPtr);
       Book::incrementBookCount();
       count++;
     }
   }
 
+}
 
+
+void testReadInDataBase(list<Book> bookList)
+{
+  system("clear");
+  cout << "Testing readInDataBase function" << endl << endl;
+  list<Book>::iterator it;
+
+
+  for (it = bookList.begin(); it != bookList.end(); ++it)
+  {
+    (*it).print();
+    cout << endl << endl;
+  }
 }
