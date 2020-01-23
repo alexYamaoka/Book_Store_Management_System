@@ -1,0 +1,1000 @@
+Star Wars
+0-3452-6079-1
+George Lucas
+Del Rey
+10/18/2017
+5
+59.95
+100.00
+The Empire Strikes Back (Star Wars)
+0-3452-9209-X
+George Lucas
+Ballantine
+04/01/2017
+2
+179.58
+185.00
+Splinter of the Mind's Eye (Star Wars)
+0-3453-2023-9
+George Lucas
+Del Rey
+11/08/2017
+3
+24
+26.50
+Return of the Jedi (Star Wars)
+0-3453-0767-4
+George Lucas
+Del Rey
+10/09/2017
+4
+2.94
+6.50
+Heir to the Empire (Star Wars: The Thrawn Trilogy, Vol. 1)
+0-5532-9612-4
+Timothy Zahn
+Bantam
+11/01/2017
+10
+25.38
+27.00
+Dark Force Rising (Star Wars: The Thrawn Trilogy, Vol. 2
+0-5535-6071-9
+Timothy Zahn
+Bantam
+11/08/2017
+10
+25.38
+27.00
+The Last Command (Star Wars: The Thrawn Trilogy)
+0-5535-6492-7
+Timothy Zahn
+Bantam
+11/02/2017
+10
+14.30
+17
+Specter of the Past (Star Wars: The Hand of Thrawn #1)
+0-5532-9804-6
+Timothy Zahn
+Bantam
+11/08/2017
+5
+13.66
+15
+Vision of the Future (Star Wars: The Hand of Thrawn, Book 2)
+0-5535-7879-0
+Timothy Zahn
+Bantam
+11/06/2017
+5
+10.85
+15
+Battlestar Galactica
+1-8528-6088-X
+Glen A.;Thurston, Robert Larson 
+Titan Books
+11/08/2015
+5
+102.04
+150.00
+New Battlestar Galactica Volume 1 (Battlestar Galactica (Dynamite)) (v. 1)
+1-9333-0533-9
+Diamond Comic Distributors Inc.
+Dynamite Entertainment
+11/08/2017
+5
+29.95
+35.00
+New Battlestar Galactica Volume II Hardcover (Battlestar Galactica (Dynamite)) 
+1-9333-0553-3
+Greg Pak
+Dynamite Entertainment
+11/03/2017
+5
+34.95
+37.00
+The Hobbit
+0-6189-6863-6
+J.R.R. Tolkien
+Houghton Mifflin Harcourt
+11/10/2017
+1
+17.61
+20.00
+The Lord of the Rings: 50th Anniversary, One Vol. Edition
+0-6186-4561-6
+J.R.R. Tolkien
+Houghton Mifflin Harcourt
+11/10/2017
+4
+29.89
+32.00
+The Two Towers
+0-3954-8933-4
+J.R.R. Tolkien
+Houghton Mifflin Harcourt
+11/10/2017
+4
+17.89
+19.00
+The Return of the King
+0-3954-8930-X
+J.R.R. Tolkien
+Houghton Mifflin Harcourt
+11/10/2017
+6
+16.89
+19.00
+The Fellowship of the Ring
+0-3954-8931-8
+J.R.R. Tolkien
+Houghton Mifflin Harcourt
+11/10/2017
+7
+18.70
+20.00
+C++ Programming: From Problem Analysis to Program Design 7th Edition
+1-2858-5274-5
+D.S. Malik
+Course Technology
+11/16/2017
+3
+85.67
+100.00
+Digital Computer Electronics
+0-0746-2235-8
+Malvino
+Mc Graw Hill India
+11/16/2017
+10
+44.56
+50.00
+Assembly Language for x86 Processors (7th Edition)
+0-1337-6940-2
+Irvin, K.R.
+Pearson
+11/16/2017
+10
+178.22
+200
+The Tainted Sword
+1-5607-6395-7
+Watry, D.J.
+Wizards of the Coast
+11/16/2017
+10
+29.75
+35.50
+The Garden of the Stone
+0-7394-0654-X
+Victoria Strauss
+Science Fiction Book Club
+05/13/2018
+8
+17.64
+22.93
+Code of Conduct
+0-7394-0711-2
+Kristine Smith
+AVON EOS (1999)
+05/13/2018
+2
+12.1
+15.73
+The Mammoth Book of Comic Fantasy II
+0-7394-0714-7
+Mike Resnick, ed.
+Carroll & Graf Publishers
+05/13/2018
+24
+4.71
+6.12
+The Hallowed Isle
+0-7394-0776-7
+Diana L. Paxson
+TBD
+05/13/2018
+2
+10.66
+13.86
+Starfire
+0-7394-0791-0
+Charles Sheffield
+TBD
+05/13/2018
+11
+15.09
+19.62
+The Sarantine Mosaic
+0-7394-0792-9
+Guy Gavriel Kay
+TBD
+05/13/2018
+24
+6.27
+8.15
+Journeys of the Catechist
+0-7394-0792-9
+Alan Dean Foster
+TBD
+05/13/2018
+24
+7.38
+9.59
+The Bicentennial Man and Other Stories
+0-7394-0816-X
+Isaac Asimov
+TBD
+05/13/2018
+18
+7.07
+9.19
+The Lord of the Rings
+0-7394-0825-9
+J. R. R. Tolkien
+TBD
+05/13/2018
+3
+9.11
+11.84
+The Century Next Door
+0-7394-0885-2
+John Barnes
+TBD
+05/13/2018
+4
+16.02
+20.83
+Black Heart, Ivory Bones
+0-7394-0892-5
+Ellen Datlow & Terri Windling, eds.
+TBD
+05/13/2018
+19
+4.69
+6.1
+Dune
+0-7394-0902-6
+Frank Herbert
+TBD
+05/13/2018
+6
+14.46
+18.8
+The Foundation Trilogy
+0-7394-0903-4
+Isaac Asimov
+TBD
+05/13/2018
+12
+14.86
+19.32
+The Stars My Destination
+0-7394-0907-7
+Alfred Bester
+TBD
+05/13/2018
+25
+12.67
+16.47
+Valorian's Children
+0-7394-0949-2
+Mary H. Herbert
+TBD
+05/13/2018
+19
+19.39
+25.21
+Battlefield Earth
+0-7394-0950-6
+L. Ron Hubbard
+TBD
+05/13/2018
+10
+13.06
+16.98
+Men in Black: The Grazer Conspiracy
+0-7394-0980-8
+Dean Wesley Smith
+TBD
+05/13/2018
+15
+8.69
+11.3
+On the Oceans of Eternity
+0-7394-1007-5
+S. M. Stirling
+TBD
+05/13/2018
+1
+19.67
+25.57
+Exploring the Horizons
+0-7394-1009-1
+Gardner Dozois, ed.
+TBD
+05/13/2018
+20
+5.88
+7.64
+The Hitchhiker's Trilogy
+0-7394-1012-1
+Douglas Adams
+TBD
+05/13/2018
+0
+10.03
+13.04
+The Imperial Stars
+0-7394-1013-X
+Poul Anderson
+TBD
+05/13/2018
+5
+9.35
+12.16
+Darker Than You Think
+0-7394-1050-4
+Jack Williamson
+TBD
+05/13/2018
+3
+6.32
+8.22
+The Past Through Tomorrow
+0-7394-1051-2
+Robert A. Heinlein
+TBD
+05/13/2018
+2
+5.07
+6.59
+The Hobbit
+0-7394-1074-1
+J. R. R. Tokien
+TBD
+05/13/2018
+6
+3.09
+4.02
+Suburban Gods
+0-7394-1108-X
+Brenda W. Clough
+TBD
+05/13/2018
+18
+13.54
+17.6
+Year's Best SF 5
+0-7394-1110-1
+David G. Hartwell, ed.
+TBD
+05/13/2018
+0
+7.2
+9.36
+Star Wars: New Jedi Order: Dark Tide
+0-7394-1111-X
+Michael A. Stackpole
+TBD
+05/13/2018
+20
+9.86
+12.82
+The Empire of Isher
+0-7394-1124-1
+A. E. van Vogt
+TBD
+05/13/2018
+11
+9.32
+12.12
+Out of the Silent Planet / Perelandra / That Hideous Strength
+0-7394-1146-2
+C. S. Lewis
+TBD
+05/13/2018
+9
+13.89
+18.06
+Bangs & Whimpers: Stories About the End of the World
+0-7394-1147-0
+James Frenkel, ed.
+TBD
+05/13/2018
+15
+15.91
+20.68
+X-Men
+0-7394-1148-9
+Kristine Kathryn Rusch & Dean Wesley Smith
+TBD
+05/13/2018
+20
+13.08
+17
+The Shattered Goddess
+0-7394-1149-7
+Darrell Schweitzer
+TBD
+05/13/2018
+8
+19.54
+25.4
+Asimov's Mirage
+0-7394-1150-0
+Mark W. Tiedemann
+TBD
+05/13/2018
+0
+3.03
+3.94
+The Vampire Sextette
+0-7394-1154-3
+Marvin Kaye, ed.
+TBD
+05/13/2018
+24
+13.94
+18.12
+Hunted
+0-7394-1170-5
+James Alan Gardner
+TBD
+05/13/2018
+15
+8.07
+10.49
+Wit'ch War
+0-7394-1197-7
+James Clemens
+TBD
+05/13/2018
+18
+16.04
+20.85
+Obernewtyn & The Farseekers
+0-7394-1211-6
+Isobelle Carmody
+TBD
+05/13/2018
+8
+6.18
+8.03
+Adventures of the Stainless Steel Rat
+0-7394-1220-5
+Harry Harrison
+TBD
+05/13/2018
+19
+7.31
+9.5
+The Magehound
+0-7394-1237-X
+Elaine Cunningham
+TBD
+05/13/2018
+8
+4.48
+5.82
+Confluence
+0-7394-1271-X
+Paul J. McAuley
+TBD
+05/13/2018
+12
+18.71
+24.32
+Changing Vision
+0-7394-1272-8
+Julie E. Czerneda
+TBD
+05/13/2018
+8
+12.25
+15.93
+The Swordsman's Oath
+0-7394-1273-6
+Juliet E. McKenna
+TBD
+05/13/2018
+12
+19.65
+25.55
+Star Wars: New Jedi Order: Agents of Chaos
+0-7394-1298-1
+James Luceno
+TBD
+05/13/2018
+21
+8.38
+10.89
+The Black Company: Glittering Stone I
+0-7394-1299-X
+Glen Cook
+TBD
+05/13/2018
+7
+18.11
+23.54
+The Black Company: Glittering Stone II
+0-7394-1300-7
+Glen Cook
+TBD
+05/13/2018
+25
+10.72
+13.94
+Ringworld
+0-7394-1301-5
+Larry Niven
+TBD
+05/13/2018
+13
+7.55
+9.82
+Annals of the Black Company
+0-7394-1302-3
+Glen Cook
+TBD
+05/13/2018
+2
+18.1
+23.53
+The Bridge
+0-7394-1334-1
+Janine Ellen Young
+TBD
+05/13/2018
+17
+5.53
+7.19
+His Dark Materials
+0-7394-1335-X
+Philip Pullman
+TBD
+05/13/2018
+5
+9.72
+12.64
+The Chick is in the Mail
+0-7394-1336-8
+Esther M. Friesner & Martin H. Greenberg, eds.
+TBD
+05/13/2018
+24
+10.79
+14.03
+The Firebird Trilogy
+0-7394-1380-5
+Kathy Tyers
+TBD
+05/13/2018
+11
+13.4
+17.42
+Star Trek: Rihannsu
+0-7394-1390-2
+Diane Duane
+TBD
+05/13/2018
+1
+5.43
+7.06
+Tales of Discworld
+0-7394-1391-0
+Terry Pratchett
+TBD
+05/13/2018
+5
+11.46
+14.9
+Only Forward
+0-7394-1392-9
+Michael Marshall Smith
+TBD
+05/13/2018
+19
+3.18
+4.13
+The Chrestomanci Quartet
+0-7394-1439-9
+Diana Wynne Jones
+TBD
+05/13/2018
+3
+5.28
+6.86
+Partners in Necessity
+0-7394-1441-0
+Sharon Lee & Steven Miller
+TBD
+05/13/2018
+10
+15.85
+20.61
+Excalibur
+0-7394-1442-9
+Saunders Anne Laubenthal
+TBD
+05/13/2018
+22
+7.04
+9.15
+Babylon 5: Legions of Fire
+0-7394-1485-2
+Peter David
+TBD
+05/13/2018
+16
+16.73
+21.75
+John Grimes, Lieutenant of the Survey Service
+0-7394-1486-0
+A. Bertram Chandler
+TBD
+05/13/2018
+9
+7.6
+9.88
+The Books of the Gods, Part One
+0-7394-1487-9
+Fred Saberhagen
+TBD
+05/13/2018
+5
+6.19
+8.05
+Valorian
+0-7394-1596-4
+Mary H. Herbert
+TBD
+05/13/2018
+0
+16.78
+21.81
+In Bad Company
+0-7394-1663-4
+Kage Baker
+TBD
+05/13/2018
+6
+3.4
+4.42
+The World of Tiers
+0-7394-1664-2
+Philip Jose Farmer
+TBD
+05/13/2018
+7
+15.33
+19.93
+The Sound & the Furry: The Complete Hoka Stories
+0-7394-1683-9
+Poul Anderson & Gordon R. Dickson
+TBD
+05/13/2018
+22
+7.59
+9.87
+Perdido Street Station
+0-7394-1684-7
+China Mieville
+TBD
+05/13/2018
+24
+9.04
+11.75
+Lord of Light
+0-7394-1688-X
+Roger Zelazny
+TBD
+05/13/2018
+11
+11.41
+14.83
+The Book of the Short Sun
+0-7394-1689-8
+Gene Wolfe
+TBD
+05/13/2018
+15
+9.74
+12.66
+Ship of Fools
+0-7394-1690-1
+Richard Paul Russo
+TBD
+05/13/2018
+23
+6.66
+8.66
+The Year the Cloud Fell
+0-7394-1744-4
+Kurt R. A. Giambastiani
+TBD
+05/13/2018
+7
+14.67
+19.07
+Dark of the Gods
+0-7394-1745-2
+P. C. Hodgell
+TBD
+05/13/2018
+18
+18.51
+24.06
+Evergence
+0-7394-1746-0
+Sean Williams & Shane Dix
+TBD
+05/13/2018
+16
+14.97
+19.46
+Worlds of Wonder: How to Write Science Fiction and Fantasy
+0-7394-1802-5
+David Gerrold
+TBD
+05/13/2018
+6
+14.17
+18.42
+The Complete Paratime
+0-7394-1803-3
+H. Beam Piper
+TBD
+05/13/2018
+3
+12.96
+16.85
+Star Wars: Cloak of Deception
+0-7394-1843-2
+James Luceno
+TBD
+05/13/2018
+8
+19.29
+25.08
+Year's Best SF 6
+0-7394-1856-4
+David G. Hartwell, ed.
+TBD
+05/13/2018
+1
+16.27
+21.15
+Asimov's Chimera
+0-7394-1876-9
+Mark W. Tiedemann
+TBD
+05/13/2018
+7
+11.46
+14.9
+Tales of the Rigante
+0-7394-1877-7
+David Gemmell
+TBD
+05/13/2018
+4
+8.32
+10.82
+In the Company of Others
+0-7394-1878-5
+Julie E. Czerneda
+TBD
+05/13/2018
+20
+6.3
+8.19
+War for the Oaks
+0-7394-1879-3
+Emma Bull
+TBD
+05/13/2018
+9
+11.95
+15.54
+The Gambler's Fortune
+0-7394-1938-2
+Juliet E. McKenna
+TBD
+05/13/2018
+16
+9.16
+11.91
+Year's Best Fantasy
+0-7394-1939-0
+Hartwell & Cramer, eds.
+TBD
+05/13/2018
+10
+6.46
+8.4
+Gullible's Travels
+0-7394-1940-4
+Matthew Hughes
+TBD
+05/13/2018
+24
+19.17
+24.92
+The Complete Adventures of Lucky Star
+0-7394-1941-2
+Isaac Asimov
+TBD
+05/13/2018
+13
+15.3
+19.89
+The Young Wizards
+0-7394-1943-9
+Diane Duane
+TBD
+05/13/2018
+11
+6.75
+8.78
+Time Enough for Love
+0-7394-1944-7
+Robert A. Heinlein
+TBD
+05/13/2018
+18
+17.59
+22.87
+Planet of the Apes
+0-7394-1973-0
+William T. Quick
+TBD
+05/13/2018
+1
+9.4
+12.22
+The Hunger
+0-7394-1997-8
+Whitley Strieber
+TBD
+05/13/2018
+5
+4.19
+5.45
+Black Seas of Infinity
+0-7394-2009-7
+H. P. Lovecraft
+TBD
+05/13/2018
+3
+11.25
+14.63
+Star Wars: New Jedi Order: Edge of Victory
+0-7394-2030-5
+Greg Keyes
+TBD
+05/13/2018
+5
+16.8
+21.84
+Dragon & Issola
+0-7394-2031-3
+Steven Brust
+TBD
+05/13/2018
+20
+19.11
+24.84
+Ascending
+0-7394-2092-5
+James Alan Gardner
+TBD
+05/13/2018
+4
+17.06
+22.18
+The Fall Revolution
+0-7394-2122-0
+Ken MacLeod
+TBD
+05/13/2018
+6
+16.9
+21.97
+Tales from Earthsea & The Other Wind
+0-7394-2123-9
+Ursula K. Le Guin
+TBD
+05/13/2018
+9
+9.32
+12.12
+Pride of Kings
+0-7394-2162-X
+Judith Tarr
+TBD
+05/13/2018
+21
+9.66
+12.56
+The Arthurian Companion, Second Edition
+0-7394-2163-8
+Phyllis Ann Karr
+TBD
+05/13/2018
+9
+4.74
+6.16
+The Atlas of Middle-Earth, Revised
+0-7394-2200-6
+Karen Wynn Fonstad
+TBD
+05/13/2018
+8
+10.77
+14
+Adventures in Time and Space
+0-7394-2214-6
+Raymond J. Healy & J. Francis McComas, eds.
+TBD
+05/13/2018
+4
+11.9
+15.47
+The Best Alternate History Stories of the 20th Century
+0-7394-2237-5
+Harry Turtledove & Martin H. Greenberg, eds.
+Del Rey
+05/13/2018
+6
+10.92
+14.2
+Beginning Operations
+0-7394-2246-4
+James White
+orb
+05/13/2018
+22
+19.74
+25.66
+The Last Herald-Mage
+0-7394-2295-2
+Mercedes Lackey
+Guild America Books
+05/13/2018
+14
+13.55
+17.62
+The Martian Chronicles
+0-965-01746-X
+Ray Bradbury
+TBD
+05/13/2018
+13
+11.83
+15.38
+Something Wicked This Way Comes
+0-965-02045-2
+Ray Bradbury
+TBD
+05/13/2018
+23
+14.88
+19.34
+The Illustrated Man
+0-965-02046-0
+Ray Bradbury
+TBD
+05/13/2018
+8
+11.38
+14.79
+Fahrenheit 451
+0-965-02059-2
+Ray Bradbury
+TBD
+05/13/2018
+3
+4.21
+5.47

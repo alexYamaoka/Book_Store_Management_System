@@ -6,11 +6,11 @@
 #include "book.h"
 using namespace std;
 
+void readInDataBase();
+
 int main()
 {
   int selection = 0;
-
-
 
   do
   {
@@ -42,4 +42,10 @@ int main()
 
 
   return 0;
+}
+
+
+void readInDataBase()
+{
+  
 }
