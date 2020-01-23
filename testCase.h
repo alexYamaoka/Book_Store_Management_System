@@ -10,6 +10,7 @@
 
 #include "book.h"
 #include "avlTree.h"
+#include "binarySearchLinkedList.h"
 using namespace std;
 
 void testBookList(list<Book> bookList)
@@ -28,11 +29,24 @@ void testBookList(list<Book> bookList)
   cout << endl << endl;
 
 
-  cout << "Get Search Time " << endl;
+  cout << "Binary Search Linked List" << endl;
   cout << "*********************************************" << endl << endl;
 
+  Book searchItem = new Book("Men in Black: The Grazer Conspiracy", "0-7394-0980-8", "Dean Wesley Smith", "TBD", "05/13/2018", 15, 8.69, 11.3);
+
   auto start = std::chrono::high_resolution_clock::now();
+
+
+  Book* bookRetrieved = binarySearch(bookList, searchItem);
+
+
+
   auto finish = std::chrono::high_resolution_clock::now();
+
+  if (bookRetrieved != nullptr)
+  {
+    bookRetrieved.print();
+  }
 
 
 
