@@ -158,33 +158,41 @@ void Book::print()
 
 ostream& operator << (ostream& osObject, const Book& book)
 {
-  
+  osObject << "Book Title: " << book.bookTitle << endl;
+  osObject << "ISBN: " << book.isbn << endl;
+  osObject << "Author: " << book.author << endl;
+  osObject << "Publisher: " << book.publisher << endl;
+  osObject << "Date Added: " << book.dateAdded << endl;
+  osObject << "Quantity On Hand: " << book.quantityOnHand << endl;
+  osObject << "Wholesale Cost: " << book.wholesaleCost << endl;
+  osObject << "Retail Price: " << book.retailPrice << endl;
+
   return osObject;
 }
 
+
 bool Book::operator == (const Book& otherBook) const
 {
-
-  return true;
+  return bookTitle == otherBook.bookTitle;
 }
 
 bool Book::operator != (const Book& otherBook) const
 {
-  return true;
+  return bookTitle != otherBook.bookTitle;
 }
 
 bool Book::operator >= (const Book& otherBook) const
 {
-  return true;
+  return bookTitle >= otherBook.bookTitle;
 }
 
 bool Book::operator > (const Book& otherBook) const
 {
-  return true;
+  return bookTitle > otherBook.bookTitle;
 }
 
 
 bool Book::operator < (const Book& otherBook) const
 {
-  return true;
+  return bookTitle < otherBook.bookTitle;
 }
