@@ -1,15 +1,15 @@
-#include "cashierModule.h"
+#include "inventoryModule.h"
+using namespace std;
 
-void cashierMenu()
+void inventoryMenu()
 {
   bool isTransactionComplete = false;
   char selection = '\0';
-
-
+  
   do
   {
     cout << "Serendipity Book Store" << endl;
-    cout << "Cashier Menu" << endl;
+    cout << "Inventory Menu" << endl;
 
 
 
@@ -42,3 +42,7 @@ void cashierMenu()
   cin.get();
 
 }
+void searchBook();
+void addBook();
+void editBook();
+void deleteBook();
