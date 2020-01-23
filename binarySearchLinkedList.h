@@ -2,11 +2,8 @@
 #define SEARCHALGORITHMS_H
 
 #include <iostream>
-<<<<<<< HEAD
 #include "Book.h"
-=======
-#include "Book"
->>>>>>> feeb66f0e30c4be9e099c14fdaacea2dfb639561
+
 using namespace std;
 
 
