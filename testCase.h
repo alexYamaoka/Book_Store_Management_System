@@ -10,7 +10,7 @@
 
 #include "book.h"
 #include "avlTree.h"
-#include "binarySearchLinkedList.h"
+#include "sequentialSearchList.h"
 using namespace std;
 
 void testBookList(list<Book> bookList)
@@ -37,7 +37,7 @@ void testBookList(list<Book> bookList)
   auto start = std::chrono::high_resolution_clock::now();
 
 
-  Book* bookRetrieved = binarySearch(bookList, searchItem);
+  Book* bookRetrieved = sequntialSearch(bookList, searchItem);
 
 
 
