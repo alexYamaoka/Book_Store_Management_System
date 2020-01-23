@@ -1,5 +1,5 @@
 #include <iostream>
-#include "displayMenu.h"
+#include "mainMenu.h"
 #include "cashierModule.h"
 #include "inventoryModule.h"
 using namespace std;

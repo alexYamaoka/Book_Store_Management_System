@@ -21,7 +21,7 @@ int mainMenu()
 
   while (selection < 1 || selection > 4)
   {
-    cout << "Please enter selection 1 - 4: ";
+    cout << "Please enter selection (1 - 4): ";
     cin >> selection;
   }
 

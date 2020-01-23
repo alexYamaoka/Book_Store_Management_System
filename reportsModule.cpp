@@ -1,7 +1,10 @@
-#include "inventoryModule.h"
+#ifndef REPORTSMODULE_H
+#define REPORTSMODULE_H
+
+#include <iostream>
 using namespace std;
 
-void inventoryMenu()
+void reportsMenu()
 {
   int selection = 0;
 
@@ -54,13 +57,25 @@ void inventoryMenu()
   cin.ignore(1000, '\n');
   cin.get();
 
-
 }
 
-void searchBook();
 
-void addBook();
+void viewAllListing();
 
-void editBook();
+void reportWholesale();
 
-void deleteBook();
+void reportRetail();
+
+void reportQuantity();
+
+void viewByWholesale();
+
+void viewByRetail();
+
+void viewByDateAdded();
+
+
+
+
+
+#endif
