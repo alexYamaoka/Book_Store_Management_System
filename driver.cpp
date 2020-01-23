@@ -3,6 +3,7 @@
 #include "cashierModule.h"
 #include "inventoryModule.h"
 #include "reportsModule.h"
+#include "book.h"
 using namespace std;
 
 int main()
