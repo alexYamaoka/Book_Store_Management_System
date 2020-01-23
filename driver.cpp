@@ -2,6 +2,7 @@
 #include "mainMenu.h"
 #include "cashierModule.h"
 #include "inventoryModule.h"
+#include "reportsModule.h"
 using namespace std;
 
 int main()
