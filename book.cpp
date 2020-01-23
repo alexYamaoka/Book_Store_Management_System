@@ -21,7 +21,7 @@ int Book::getBookCount()
 
 
 
-Book::Book(string bookTitle, string isbn, string author, string publisher, string dateAdded, int quantityOnHand, double wholesaleCost, double retailCost)
+Book::Book(string bookTitle, string isbn, string author, string publisher, string dateAdded, int quantityOnHand, double wholesaleCost, double retailPrice)
 {
   setBookTitle(bookTitle);
   setIsbn(isbn);
@@ -30,7 +30,7 @@ Book::Book(string bookTitle, string isbn, string author, string publisher, strin
   setDateAdded(dateAdded);
   setQuantityOnHand(quantityOnHand);
   setWholesaleCost(wholesaleCost);
-  setRetailCost(retailCost);
+  setRetailPrice(retailPrice);
   incrementBookCount();
 }
 
@@ -51,7 +51,7 @@ Book::Book(const Book& otherBook)
   dateAdded = otherBook.dateAdded;
   quantityOnHand = otherBook.quantityOnHand;
   wholesaleCost = otherBook.wholesaleCost;
-  retailCost= otherBook.retailCost;
+  retailPrice= otherBook.retailPrice;
 }
 
 
@@ -94,9 +94,9 @@ void Book::setWholesaleCost(double wholesaleCost)
   this->wholesaleCost = wholesaleCost;
 }
 
-void Book::setRetailCost(double retailCost)
+void Book::setRetailPrice(double retailPrice)
 {
-  this->retailCost = retailCost;
+  this->retailPrice = retailPrice;
 }
 
 
@@ -137,9 +137,9 @@ double Book::getWholesaleCost()
   return wholesaleCost;
 }
 
-double Book::getRetailCost()
+double Book::getRetailPrice()
 {
-  return retailCost;
+  return retailPrice;
 }
 
 
@@ -152,5 +152,5 @@ void Book::print()
   cout << "Date Added: " << dateAdded << endl;
   cout << "Quantity On Hand: " << quantityOnHand << endl;
   cout << "wholesale Cost: $ " << wholesaleCost << endl;
-  cout << "Retail Cost: $ " << retailCost << endl;
+  cout << "Retail Price: $ " << retailPrice << endl;
 }

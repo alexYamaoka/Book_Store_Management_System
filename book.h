@@ -16,7 +16,7 @@ private:
   string dateAdded;
   int quantityOnHand;
   double wholesaleCost;
-  double retailCost;
+  double retailPrice;
 
   static void incrementBookCount();
   static void decrementBookCount();
@@ -37,7 +37,7 @@ public:
   void setDateAdded(string dateAdded);
   void setQuantityOnHand(int quantityOnHand);
   void setWholesaleCost(double wholesaleCost);
-  void setRetailCost(double retailCost);
+  void setRetailPrice(double retailPrice);
 
   string getBookTitle();
   string getIsbn();
@@ -46,7 +46,7 @@ public:
   string getDateAdded();
   int getQuantityOnHand();
   double getWholesaleCost();
-  double getRetailCost();
+  double getRetailPrice();
 
   void print();
   bool equals(const Book& other) const;
