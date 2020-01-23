@@ -10,7 +10,7 @@ void mainMenu()
 
   do
   {
-    System("clear");
+    system("clear");
 
     cout << "Serendipity Book Store" << endl;
     cout << endl << endl;
