@@ -1,4 +1,6 @@
 #include <iostream>
+#include "cashierModule.h"
+
 using namespace std;
 
 void mainMenu()
@@ -31,6 +33,7 @@ void mainMenu()
     switch(selection)
     {
       case 1:
+        cashierMenu();
         break;
 
       case 2:
