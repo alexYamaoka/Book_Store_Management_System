@@ -23,7 +23,7 @@ void cashierMenu()
     cin >> selection;
 
 
-    while (selection != 'y' || selection != 'Y' || selection != 'n' || selection != 'N')
+    while (selection != 'y' && selection != 'Y' && selection != 'n' && selection != 'N')
     {
       cout << "Please try again (Y/N): ";
       cin >> selection;
@@ -34,7 +34,7 @@ void cashierMenu()
       isTransactionComplete = true;
     }
 
-  } while (isTransactionComplete != false);
+  } while (!isTransactionComplete);
 
 
 
