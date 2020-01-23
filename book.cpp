@@ -154,3 +154,37 @@ void Book::print()
   cout << "wholesale Cost: $ " << wholesaleCost << endl;
   cout << "Retail Price: $ " << retailPrice << endl;
 }
+
+
+ostream& operator << (ostream& osObject, const Book& book)
+{
+  
+  return osObject;
+}
+
+bool Book::operator == (const Book& otherBook) const
+{
+
+  return true;
+}
+
+bool Book::operator != (const Book& otherBook) const
+{
+  return true;
+}
+
+bool Book::operator >= (const Book& otherBook) const
+{
+  return true;
+}
+
+bool Book::operator > (const Book& otherBook) const
+{
+  return true;
+}
+
+
+bool Book::operator < (const Book& otherBook) const
+{
+  return true;
+}
