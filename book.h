@@ -44,13 +44,13 @@ public:
   void setRetailPrice(double retailPrice);
 
   string getBookTitle() const;
-  string getIsbn();
-  string getAuthor();
-  string getPublisher();
+  string getIsbn() const;
+  string getAuthor() const;
+  string getPublisher() const;
   string getDateAdded() const;
   int getQuantityOnHand() const;
   double getWholesaleCost() const;
-  double getRetailPrice();
+  double getRetailPrice() const;
 
   void print();
   bool equals(const Book& other) const;

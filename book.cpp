@@ -31,7 +31,7 @@ Book::Book(string bookTitle, string isbn, string author, string publisher, strin
   setQuantityOnHand(quantityOnHand);
   setWholesaleCost(wholesaleCost);
   setRetailPrice(retailPrice);
-  
+
 }
 
 Book::Book(string bookTitle, string isbn)
@@ -113,17 +113,17 @@ string Book::getBookTitle() const
   return bookTitle;
 }
 
-string Book::getIsbn()
+string Book::getIsbn() const
 {
   return isbn;
 }
 
-string Book::getAuthor()
+string Book::getAuthor() const
 {
   return author;
 }
 
-string Book::getPublisher()
+string Book::getPublisher() const
 {
   return publisher;
 }
@@ -143,7 +143,7 @@ double Book::getWholesaleCost() const
   return wholesaleCost;
 }
 
-double Book::getRetailPrice()
+double Book::getRetailPrice() const
 {
   return retailPrice;
 }

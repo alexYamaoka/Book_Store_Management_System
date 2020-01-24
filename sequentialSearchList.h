@@ -5,11 +5,14 @@
 #include <list>
 #include <iterator>
 #include <string>
+#include <algorithm>
+
+
 #include "book.h"
 
 using namespace std;
 
-Book sequentialSearch(list<Book>& bookList, const Book& searchItem) throw(string);
+Book* sequentialSearch(list<Book>& bookList, const Book& searchItem) throw(string);
 
 
 

@@ -110,8 +110,6 @@ void readInDataBase(list<Book>& bookList, AvlTree& bookTree)
   count++;
 
 
-
-
   while (!fin.fail())
   {
     fin.ignore(1000, '\n');

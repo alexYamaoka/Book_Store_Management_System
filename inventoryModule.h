@@ -11,7 +11,7 @@
 using namespace std;
 
 void inventoryMenu(list<Book>& bookList, AvlTree& bookTree);
-void searchBook(list<Book>& bookList, AvlTree& bookTree);
+Book* searchBook(list<Book>& bookList, AvlTree& bookTree) throw(string);
 void addBook();
 void editBook();
 void deleteBook();

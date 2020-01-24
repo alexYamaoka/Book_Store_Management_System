@@ -9,6 +9,7 @@ void inventoryMenu(list<Book>& bookList, AvlTree& bookTree)
 
 
 
+
   do
   {
     time_t now = time(0);
@@ -47,7 +48,19 @@ void inventoryMenu(list<Book>& bookList, AvlTree& bookTree)
     switch (selection)
     {
       case 1:
-        searchBook(bookList, bookTree);
+        try
+        {
+          Book* retreivedBook = searchBook(bookList, bookTree);
+          retreivedBook->print();
+          cout << "Please Press Enter To Continue..." << endl;
+          cin.get();
+          delete retreivedBook;
+        }
+        catch(string ex)
+        {
+          cout << ex << endl;
+        }
+
         break;
 
       case 2:
@@ -80,7 +93,7 @@ void inventoryMenu(list<Book>& bookList, AvlTree& bookTree)
 
 
 
-void searchBook(list<Book>& bookList, AvlTree& bookTree)
+Book* searchBook(list<Book>& bookList, AvlTree& bookTree) throw(string)
 {
   string toSearch = "";
 
@@ -89,25 +102,37 @@ void searchBook(list<Book>& bookList, AvlTree& bookTree)
 
   cout << "Search Book" << endl;
 
+  cin.ignore(1000, '\n');
+
   cout << "Enter Book Title or ISBN(x-xxxx-xxxx-x): ";
   getline(cin, toSearch, '\n');
 
   Book* tempBook = new Book(toSearch, toSearch);
+  Book* retreivedBook;
+
+
 
 
 
   // ***************** List data structure **********************
-  try
+  retreivedBook = sequentialSearch(bookList, *tempBook);
+
+  if (retreivedBook != nullptr)
   {
-    sequentialSearch(bookList, *tempBook);
+    cout << "Book Found" << endl;
+    return retreivedBook;
   }
-  catch(string ex)
+  else
   {
-    cout << ex << endl;
+    cout << "Book Not Found" << endl;
   }
 
 
 
+
+
+
+  /*
   // ***************** AVL Tree data structure **********************
   // for avl cant do substring search
   try
@@ -119,16 +144,11 @@ void searchBook(list<Book>& bookList, AvlTree& bookTree)
   catch(string ex)
   {
     cout << ex << endl;
+    throw;
   }
+  */
 
-
-
-
-
-
-
-  cin.ignore(1000, '\n');
-  cin.get();
+  return nullptr;
 }
 
 
@@ -242,16 +262,7 @@ void addBook()
 
 
 
-
-
-
-
-
-
-
   } while (selection != 0);
-
-
 
 
 
