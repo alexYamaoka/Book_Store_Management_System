@@ -3,21 +3,26 @@
 
 #include <iostream>
 #include <iomanip>
+#include <list>
+#include <iterator>
+#include <ctime>
+#include "book.h"
+#include "avlTree.h"
 using namespace std;
 
-void reportsMenu();
+void reportsMenu(list<Book>& bookList, AvlTree& bookTree);
 
-void viewAllListing();
+void viewAllListing(list<Book>& bookList, AvlTree& bookTree);
 
-void reportWholesale();
+void reportWholesale(list<Book>& bookList, AvlTree& bookTree);
 
-void reportRetail();
+void reportRetail(list<Book>& bookList, AvlTree& bookTree);
 
-void viewByQuantity();
+void viewByQuantity(list<Book>& bookList, AvlTree& bookTree);
 
-void viewByWholesale();
+void viewByWholesale(list<Book>& bookList, AvlTree& bookTree);
 
-void viewByDateAdded();
+void viewByDateAdded(list<Book>& bookList, AvlTree& bookTree);
 
 
 

@@ -7,11 +7,18 @@ void inventoryMenu(list<Book>& bookList, AvlTree& bookTree)
 {
   int selection = 0;
 
+
+
   do
   {
+    time_t now = time(0);
+    char*dt = ctime(&now);
+    
     system("clear");
 
-    cout << "Serendipity Book Sellers" << endl << endl;
+    cout << "Serendipity Book Sellers" << endl;
+    cout << "Date and Time: " << dt << endl;
+    cout << endl << endl;
 
     cout << "*            Inventory Menu          *" << endl;
     cout << "**************************************" << endl;

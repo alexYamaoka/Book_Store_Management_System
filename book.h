@@ -5,6 +5,8 @@
 #include <string>
 using namespace std;
 
+const int DB_SIZE = 125;
+
 class Book
 {
 private:

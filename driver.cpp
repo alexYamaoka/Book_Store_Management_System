@@ -37,7 +37,7 @@ int main()
     switch(selection)
     {
       case 1:
-        //cashierMenu();
+        cashierMenu();
         break;
 
       case 2:
@@ -45,7 +45,7 @@ int main()
         break;
 
       case 3:
-        //reportsMenu();
+        reportsMenu(bookList, bookTree);
         break;
 
       case 4:
