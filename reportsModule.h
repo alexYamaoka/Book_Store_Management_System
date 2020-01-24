@@ -2,6 +2,7 @@
 #define REPORTSMODULE_H
 
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 void reportsMenu();
@@ -12,11 +13,9 @@ void reportWholesale();
 
 void reportRetail();
 
-void reportQuantity();
+void viewByQuantity();
 
 void viewByWholesale();
-
-void viewByRetail();
 
 void viewByDateAdded();
 

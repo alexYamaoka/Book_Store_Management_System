@@ -88,6 +88,7 @@ void searchBook(list<Book>& bookList, AvlTree& bookTree)
   Book* tempBook = new Book(toSearch, toSearch);
 
 
+
   // ***************** List data structure **********************
   try
   {
@@ -101,9 +102,12 @@ void searchBook(list<Book>& bookList, AvlTree& bookTree)
 
 
   // ***************** AVL Tree data structure **********************
+  // for avl cant do substring search
   try
   {
-    bookTree.search(*tempBook);
+    Book requestedBook = bookTree.search(*tempBook);
+
+    requestedBook.print();
   }
   catch(string ex)
   {
