@@ -53,26 +53,32 @@ void reportsMenu(list<Book>& bookList, AvlTree& bookTree)
     switch (selection)
     {
       case 1:
+        bookList.sort(compareByTitle);
         viewAllListing(bookList, bookTree);
         break;
 
       case 2:
+        bookList.sort(compareByTitle);
         reportWholesale(bookList, bookTree);
         break;
 
       case 3:
+        bookList.sort(compareByTitle);
         reportRetail(bookList, bookTree);
         break;
 
       case 4:
+        bookList.sort(compareByQuantity);
         viewByQuantity(bookList, bookTree);
         break;
 
       case 5:
+        bookList.sort(compareByWholesale);
         viewByWholesale(bookList, bookTree);
         break;
 
       case 6:
+        bookList.sort(compareByDateAdded);
         viewByDateAdded(bookList, bookTree);
         break;
 
@@ -229,6 +235,7 @@ void reportWholesale(list<Book>& bookList, AvlTree& bookTree)
     {
       system("clear");
       pageNumber++;
+      cout << "Serendipity Booksellers" << endl;
       cout << "Inventory Wholesale Value" << endl;
       cout << "Date and Time: " << dt << endl;
       cout << "Database Size: " << DB_SIZE << endl;
@@ -375,6 +382,7 @@ void viewByQuantity(list<Book>& bookList, AvlTree& bookTree)
 
 
 
+
   system("clear");
   cout << "Serndipity Book Sellers" << endl;
   cout << "View By Quantity" << endl;
@@ -449,6 +457,7 @@ void viewByWholesale(list<Book>& bookList, AvlTree& bookTree)
   char*dt = ctime(&now);
 
 
+
   system("clear");
   cout << "Serndipity Book Sellers" << endl;
   cout << "View By Wholesale Cost" << endl;
@@ -474,6 +483,7 @@ void viewByWholesale(list<Book>& bookList, AvlTree& bookTree)
     {
       system("clear");
       pageNumber++;
+      cout << "Serendipity Booksellers" << endl;
       cout << "Listing By Cost" << endl;
       cout << "Date and Time: " << dt << endl;
       cout << "Database Size: " << DB_SIZE << endl;
@@ -519,6 +529,8 @@ void viewByDateAdded(list<Book>& bookList, AvlTree& bookTree)
   time_t now = time(0);
   char*dt = ctime(&now);
 
+
+
   system("clear");
   cout << "Serndipity Book Sellers" << endl;
   cout << "View By Date Added" << endl;
@@ -544,6 +556,7 @@ void viewByDateAdded(list<Book>& bookList, AvlTree& bookTree)
     {
       system("clear");
       pageNumber++;
+      cout << "Serendipity Booksellers" << endl;
       cout << "Listing By Date Added" << endl;
       cout << "Date and Time: " << dt << endl;
       cout << "Database Size: " << DB_SIZE << endl;

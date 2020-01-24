@@ -8,6 +8,7 @@
 #include <ctime>
 #include "book.h"
 #include "avlTree.h"
+#include "compareList.h"
 using namespace std;
 
 void reportsMenu(list<Book>& bookList, AvlTree& bookTree);

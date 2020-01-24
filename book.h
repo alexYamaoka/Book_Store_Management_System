@@ -43,13 +43,13 @@ public:
   void setWholesaleCost(double wholesaleCost);
   void setRetailPrice(double retailPrice);
 
-  string getBookTitle();
+  string getBookTitle() const;
   string getIsbn();
   string getAuthor();
   string getPublisher();
-  string getDateAdded();
-  int getQuantityOnHand();
-  double getWholesaleCost();
+  string getDateAdded() const;
+  int getQuantityOnHand() const;
+  double getWholesaleCost() const;
   double getRetailPrice();
 
   void print();

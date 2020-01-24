@@ -13,7 +13,7 @@ void inventoryMenu(list<Book>& bookList, AvlTree& bookTree)
   {
     time_t now = time(0);
     char*dt = ctime(&now);
-    
+
     system("clear");
 
     cout << "Serendipity Book Sellers" << endl;
@@ -228,6 +228,7 @@ void addBook()
 
       case 9:
         cout << "Saving Book To Data Base" << endl;
+        Book::incrementBookCount();
         break;
 
       case 0:
