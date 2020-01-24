@@ -87,7 +87,7 @@ void reportsMenu(list<Book>& bookList, AvlTree& bookTree)
 
 
 
-  cin.ignore(1000, '\n');
+  cout << "Press Enter To Continue..." << endl;
   cin.get();
 
 }
@@ -112,12 +112,11 @@ void viewAllListing(list<Book>& bookList, AvlTree& bookTree)
   cout << "Book Count: " << Book::getBookCount() << endl;
   cout << "Page " << pageNumber << endl;
   cout << endl << endl;
-
   cout << left;
   cout << setw(40) << "Title";
-  cout << setw(15) << "ISBN";
-  cout << setw(35) << "Author";
-  cout << setw(30) << "Publisher";
+  cout << setw(18) << "ISBN";
+  cout << setw(25) << "Author";
+  cout << setw(25) << "Publisher";
   cout << setw(15) << "Date Added";
   cout << right;
   cout << setw(15) << "Qty on Hand";
@@ -125,8 +124,61 @@ void viewAllListing(list<Book>& bookList, AvlTree& bookTree)
   cout << setw(20) << "Retail Price($)";
   cout << endl;
   cout << right;
-  cout << setw(195) << setfill('-') << "-" << endl;
+  cout << setw(178) << setfill('-') << "-" << endl;
   cout << setfill(' ');
+  cin.ignore(1000, '\n');
+
+
+  for (it = bookList.begin(); it != bookList.end(); ++it)
+  {
+    if (0 == counter%20)
+    {
+
+      system("clear");
+      pageNumber++;
+      cout << "Serndipity Book Sellers" << endl;
+      cout << "Inventory Listing" << endl;
+      cout << "Date and Time: " << dt << endl;
+      cout << "Database Size: " << DB_SIZE << endl;
+      cout << "Book Count: " << Book::getBookCount() << endl;
+      cout << "Page " << pageNumber << endl;
+      cout << endl << endl;
+      cout << left;
+      cout << setw(40) << "Title";
+      cout << setw(18) << "ISBN";
+      cout << setw(25) << "Author";
+      cout << setw(25) << "Publisher";
+      cout << setw(15) << "Date Added";
+      cout << right;
+      cout << setw(15) << "Qty on Hand";
+      cout << setw(20) << "Wholesale Cost($)";
+      cout << setw(20) << "Retail Price($)";
+      cout << endl;
+      cout << right;
+      cout << setw(178) << setfill('-') << "-" << endl;
+      cout << setfill(' ');
+    }
+    cout << left << setprecision(2) << showpoint << fixed;
+    cout << setw(40) << (*it).getBookTitle().substr(0, 35);
+    cout << setw(18) << (*it).getIsbn();
+    cout << setw(25) << (*it).getAuthor().substr(0, 20);
+    cout << setw(25) << (*it).getPublisher().substr(0, 20);
+    cout << setw(15) << (*it).getDateAdded();
+    cout << right;
+    cout << setw(15) << (*it).getQuantityOnHand();
+    cout << setw(20) << (*it).getWholesaleCost();
+    cout << setw(20) << (*it).getRetailPrice();
+    cout << endl;
+
+
+    if (19 == counter%20)
+    {
+      cout << endl;
+      cout << "Press Enter To Continue..." << endl;
+      cin.get();
+    }
+    counter++;
+  }
 
 
 
@@ -134,9 +186,10 @@ void viewAllListing(list<Book>& bookList, AvlTree& bookTree)
 
 
 
-cin.ignore(1000, '\n');
+cout << "Press Enter To Continue..." << endl;
 cin.get();
 }
+
 
 
 void reportWholesale(list<Book>& bookList, AvlTree& bookTree)
@@ -158,7 +211,6 @@ void reportWholesale(list<Book>& bookList, AvlTree& bookTree)
   cout << "Book Count: " << Book::getBookCount() << endl;
   cout << "Page " << pageNumber << endl;
   cout << endl << endl;
-
   cout << left;
   cout << setw(40) << "Title";
   cout << setw(15) << "ISBN";
@@ -167,18 +219,62 @@ void reportWholesale(list<Book>& bookList, AvlTree& bookTree)
   cout << setw(25) << "Wholesale Cost($)";
   cout << endl;
   cout << right;
-  cout << setw(100) << setfill('-') << "-" << endl;
+  cout << setw(95) << setfill('-') << "-" << endl;
   cout << setfill(' ');
-
-
-
-
-
-
-
   cin.ignore(1000, '\n');
+
+  for (it = bookList.begin(); it != bookList.end(); ++it)
+  {
+    if (0 == counter%20)
+    {
+      system("clear");
+      pageNumber++;
+      cout << "Inventory Wholesale Value" << endl;
+      cout << "Date and Time: " << dt << endl;
+      cout << "Database Size: " << DB_SIZE << endl;
+      cout << "Book Count: " << Book::getBookCount() << endl;
+      cout << "Page " << pageNumber << endl;
+      cout << endl << endl;
+      cout << left;
+      cout << setw(40) << "Title";
+      cout << setw(15) << "ISBN";
+      cout << right;
+      cout << setw(15) << "Qty on Hand";
+      cout << setw(25) << "Wholesale Cost($)";
+      cout << endl;
+      cout << setw(95) << setfill('-') << "-" << endl;
+      cout << setfill(' ');
+    }
+    cout << left;
+    cout << setw(40) << (*it).getBookTitle().substr(0, 35);
+    cout << setw(15) << (*it).getIsbn();
+    cout << right;
+    cout << setw(15) << (*it).getQuantityOnHand();
+    cout << setw(25) << (*it).getWholesaleCost();
+    cout << endl;
+
+    totalWholeSaleValue = totalWholeSaleValue + ((*it).getQuantityOnHand() * (*it).getWholesaleCost());
+
+    if (19 == counter%20)
+    {
+      cout << endl;
+      cout << "Press Enter To Continue.." << endl;
+      cin.get();
+    }
+    counter++;
+  }
+  cout << endl << endl;
+  cout << fixed << showpoint << setprecision(2);
+  cout << "Total Wholesale Value: $ " << totalWholeSaleValue << endl << endl;
+
+
+
+  cout << "Press Enter To Continue..." << endl;
   cin.get();
 }
+
+
+
 
 void reportRetail(list<Book>& bookList, AvlTree& bookTree)
 {
@@ -201,7 +297,6 @@ void reportRetail(list<Book>& bookList, AvlTree& bookTree)
   cout << "Book Count: " << Book::getBookCount() << endl;
   cout << "Page " << pageNumber << endl;
   cout << endl << endl;
-
   cout << left;
   cout << setw(40) << "Title";
   cout << setw(15) << "ISBN";
@@ -210,18 +305,63 @@ void reportRetail(list<Book>& bookList, AvlTree& bookTree)
   cout << setw(25) << "Retail Price($)";
   cout << endl;
   cout << right;
-  cout << setw(100) << setfill('-') << "-" << endl;
+  cout << setw(95) << setfill('-') << "-" << endl;
   cout << setfill(' ');
-
-
-
-
-
-
-
   cin.ignore(1000, '\n');
+
+
+  for (it = bookList.begin(); it != bookList.end(); ++it)
+  {
+    if (0 == counter%20)
+    {
+      system("clear");
+      pageNumber++;
+      cout << "Serndipity Book Sellers" << endl;
+      cout << "Inventory Retail Value" << endl;
+      cout << "Date and Time: " << dt << endl;
+      cout << "Database Size: " << DB_SIZE << endl;
+      cout << "Book Count: " << Book::getBookCount() << endl;
+      cout << "Page " << pageNumber << endl;
+      cout << endl << endl;
+      cout << left;
+      cout << setw(40) << "Title";
+      cout << setw(15) << "ISBN";
+      cout << right;
+      cout << setw(15) << "Qty on Hand";
+      cout << setw(25) << "Retail Price($)";
+      cout << endl;
+      cout << right;
+      cout << setw(95) << setfill('-') << "-" << endl;
+      cout << setfill(' ');
+    }
+
+    cout << left;
+    cout << setw(40) << (*it).getBookTitle().substr(0, 35);
+    cout << setw(15) << (*it).getIsbn();
+    cout << right;
+    cout << setw(15) << (*it).getQuantityOnHand();
+    cout << setw(25) << (*it).getRetailPrice();
+    cout << endl;
+
+    totalRetailValue = totalRetailValue + ((*it).getQuantityOnHand() * (*it).getRetailPrice());
+    if (19 == counter%20)
+    {
+      cout << endl;
+      cout << "Press Enter To Continue.." << endl;
+      cin.get();
+    }
+    counter++;
+  }
+
+  cout << endl << endl;
+  cout << "Total Retail Value: $" << totalRetailValue << endl << endl;
+
+
+  cout << "Press Enter To Continue..." << endl;
   cin.get();
 }
+
+
 
 
 void viewByQuantity(list<Book>& bookList, AvlTree& bookTree)
@@ -243,23 +383,60 @@ void viewByQuantity(list<Book>& bookList, AvlTree& bookTree)
   cout << "Book Count: " << Book::getBookCount() << endl;
   cout << "Page " << pageNumber << endl;
   cout << endl << endl;
-
   cout << left;
-  cout << setw(90) << "Title";
+  cout << setw(70) << "Title";
   cout << setw(20) << "ISBN";
   cout << right;
   cout << setw(15) << "Qty on Hand";
   cout << endl;
-  cout << setw(150) << setfill('-') << "-" << endl;
+  cout << setw(105) << setfill('-') << "-" << endl;
   cout << setfill(' ');
-
-
-
-
-
   cin.ignore(1000, '\n');
+
+  for (it = bookList.begin(); it != bookList.end(); ++it)
+  {
+    if (0 == counter%20)
+    {
+      system("clear");
+      pageNumber++;
+      cout << "Serndipity Book Sellers" << endl;
+      cout << "Listing By Quantity" << endl;
+      cout << "Date and Time: " << dt << endl;
+      cout << "Database Size: " << DB_SIZE << endl;
+      cout << "Book Count: " << Book::getBookCount() << endl;
+      cout << "Page " << pageNumber << endl;
+      cout << endl << endl;
+      cout << left;
+      cout << setw(70) << "Title";
+      cout << setw(20) << "ISBN";
+      cout << right;
+      cout << setw(15) << "Qty on Hand";
+      cout << endl;
+      cout << setw(105) << setfill('-') << "-" << endl;
+      cout << setfill(' ');
+    }
+
+    cout << left;
+    cout << setw(70) << (*it).getBookTitle().substr(0, 60);
+    cout << setw(20) << (*it).getIsbn();
+    cout << right;
+    cout << setw(15) << (*it).getQuantityOnHand() << endl;
+
+
+    if (19 == counter%20)
+    {
+      cout << endl;
+      cout << "Press Enter To Continue.." << endl;
+      cin.get();
+    }
+    counter++;
+  }
+
+
+  cout << "Press Enter To Continue..." << endl;
   cin.get();
 }
+
 
 
 void viewByWholesale(list<Book>& bookList, AvlTree& bookTree)
@@ -272,7 +449,6 @@ void viewByWholesale(list<Book>& bookList, AvlTree& bookTree)
   char*dt = ctime(&now);
 
 
-
   system("clear");
   cout << "Serndipity Book Sellers" << endl;
   cout << "View By Wholesale Cost" << endl;
@@ -281,24 +457,56 @@ void viewByWholesale(list<Book>& bookList, AvlTree& bookTree)
   cout << "Book Count: " << Book::getBookCount() << endl;
   cout << "Page " << pageNumber << endl;
   cout << endl << endl;
-
   cout << left;
-  cout << setw(90) << "Title";
+  cout << setw(70) << "Title";
   cout << setw(20) << "ISBN";
   cout << right;
   cout << setw(15) << "Wholesale Cost";
   cout << endl;
-  cout << setw(150) << setfill('-') << "-" << endl;
+  cout << setw(105) << setfill('-') << "-" << endl;
   cout << setfill(' ');
-
-
-
-
-
-
-
-
   cin.ignore(1000, '\n');
+
+
+  for (it = bookList.begin(); it != bookList.end(); ++it)
+  {
+    if (0 == counter%20)
+    {
+      system("clear");
+      pageNumber++;
+      cout << "Listing By Cost" << endl;
+      cout << "Date and Time: " << dt << endl;
+      cout << "Database Size: " << DB_SIZE << endl;
+      cout << "Book Count: " << Book::getBookCount() << endl;
+      cout << "Page " << pageNumber << endl;
+      cout << endl << endl;
+      cout << left;
+      cout << setw(70) << "Title";
+      cout << setw(20) << "ISBN";
+      cout << right;
+      cout << setw(15) << "Wholesale Cost";
+      cout << endl;
+      cout << setw(105) << setfill('-') << "-" << endl;
+      cout << setfill(' ');
+    }
+
+    cout << left;
+    cout << setw(70) << (*it).getBookTitle().substr(0, 60);
+    cout << setw(20) << (*it).getIsbn();
+    cout << right << fixed << showpoint << setprecision(2);
+    cout << setw(15) << (*it).getWholesaleCost() << endl;
+
+
+    if (19 == counter%20)
+    {
+      cout << endl;
+      cout << "Press Enter To Continue.." << endl;
+      cin.get();
+    }
+    counter++;
+  }
+
+  cout << "Press Enter To Continue..." << endl;
   cin.get();
 }
 
@@ -319,21 +527,62 @@ void viewByDateAdded(list<Book>& bookList, AvlTree& bookTree)
   cout << "Book Count: " << Book::getBookCount() << endl;
   cout << "Page " << pageNumber << endl;
   cout << endl << endl;
-
   cout << left;
-  cout << setw(90) << "Title";
+  cout << setw(70) << "Title";
   cout << setw(20) << "ISBN";
   cout << right;
   cout << setw(15) << "Qty on Hand";
   cout << setw(15) << "Date Added";
   cout << endl;
-  cout << setw(150) << setfill('-') << "-" << endl;
+  cout << setw(120) << setfill('-') << "-" << endl;
   cout << setfill(' ');
-
-
-
-
-
   cin.ignore(1000, '\n');
+
+  for (it = bookList.begin(); it != bookList.end(); ++it)
+  {
+    if (0 == counter%20)
+    {
+      system("clear");
+      pageNumber++;
+      cout << "Listing By Date Added" << endl;
+      cout << "Date and Time: " << dt << endl;
+      cout << "Database Size: " << DB_SIZE << endl;
+      cout << "Book Count: " << Book::getBookCount() << endl;
+      cout << "Page " << pageNumber << endl;
+      cout << endl << endl;
+      cout << left;
+      cout << setw(70) << "Title";
+      cout << setw(20) << "ISBN";
+      cout << right;
+      cout << setw(15) << "Qty on Hand";
+      cout << setw(15) << "Date Added";
+      cout << endl;
+      cout << setw(120) << setfill('-') << "-" << endl;
+      cout << setfill(' ');
+    }
+
+
+    cout << left;
+    cout << setw(70) << (*it).getBookTitle().substr(0, 60);
+    cout << setw(20) << (*it).getIsbn();
+    cout << right;
+    cout << setw(15) << (*it).getQuantityOnHand();
+    cout << setw(15) << (*it).getDateAdded() << endl;
+
+
+    if (19 == counter%20)
+    {
+      cout << endl;
+      cout << "Press Enter To Continue.." << endl;
+      cin.get();
+    }
+    counter++;
+  }
+
+
+
+
+
+  cout << "Press Enter To Continue..." << endl;
   cin.get();
 }

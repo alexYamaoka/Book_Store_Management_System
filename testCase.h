@@ -64,17 +64,16 @@ void testBookList(list<Book>& bookList)
 
 
 
-
-
-
-
-
-
-
-
   cin.ignore(1000, '\n');
   cin.get();
 }
+
+
+
+
+
+
+
 
 
 void testBookTree(AvlTree& bookTree)
@@ -84,7 +83,6 @@ void testBookTree(AvlTree& bookTree)
   cout << "*********************************************" << endl << endl;
   bookTree.inOrderTraversal();
   cout << endl << endl;
-
 
 
   cout << "AVL Tree Search" << endl;
