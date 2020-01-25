@@ -6,7 +6,7 @@ using namespace std;
 void inventoryMenu(list<Book>& bookList, AvlTree& bookTree)
 {
   int selection = 0;
-
+  Book* retreivedBook;
 
 
 
@@ -48,31 +48,37 @@ void inventoryMenu(list<Book>& bookList, AvlTree& bookTree)
     switch (selection)
     {
       case 1:
-        try
+        retreivedBook = searchBook(bookList, bookTree);
+
+        if (retreivedBook != nullptr)
         {
-          Book* retreivedBook = searchBook(bookList, bookTree);
+
+          system("clear");
+          cout << "Book Information" << endl;
+          cout << "*******************************" << endl;
+          cout << endl << endl;
           retreivedBook->print();
-          cout << "Please Press Enter To Continue..." << endl;
-          cin.get();
           delete retreivedBook;
         }
-        catch(string ex)
+        else
         {
-          cout << ex << endl;
+          cout << "Book Not Found" << endl;
         }
+        cin.ignore(1000, '\n');
+        cin.get();
 
         break;
 
       case 2:
-        addBook();
+        addBook(bookList, bookTree);
         break;
 
       case 3:
-        editBook();
+        editBook(bookList, bookTree);
         break;
 
       case 4:
-        deleteBook();
+        deleteBook(bookList, bookTree);
         break;
 
       case 5:
@@ -90,10 +96,7 @@ void inventoryMenu(list<Book>& bookList, AvlTree& bookTree)
 
 
 
-
-
-
-Book* searchBook(list<Book>& bookList, AvlTree& bookTree) throw(string)
+Book* searchBook(list<Book>& bookList, AvlTree& bookTree)
 {
   string toSearch = "";
 
@@ -119,40 +122,16 @@ Book* searchBook(list<Book>& bookList, AvlTree& bookTree) throw(string)
 
   if (retreivedBook != nullptr)
   {
-    cout << "Book Found" << endl;
     return retreivedBook;
   }
-  else
-  {
-    cout << "Book Not Found" << endl;
-  }
 
-
-
-
-
-
-  /*
-  // ***************** AVL Tree data structure **********************
-  // for avl cant do substring search
-  try
-  {
-    Book requestedBook = bookTree.search(*tempBook);
-
-    requestedBook.print();
-  }
-  catch(string ex)
-  {
-    cout << ex << endl;
-    throw;
-  }
-  */
 
   return nullptr;
 }
 
 
-void addBook()
+
+void addBook(list<Book>& bookList, AvlTree& bookTree)
 {
   int selection = 0;
 
@@ -166,10 +145,21 @@ void addBook()
   double wholesaleCost = -1;
   double retailPrice = -1;
 
+  Book* bookPtr;
+
+
+  time_t now = time(0);
+  char*dt = ctime(&now);
+
+
+
   do
   {
     system("clear");
-    cout << "Serendipity Book Sellers" << endl << endl;
+    cout << "Serendipity Book Sellers" << endl;
+    cout << "Date and Time: " << dt << endl;
+    cout << endl << endl;
+
 
     cout << "Add Book" << endl << endl;
 
@@ -248,6 +238,9 @@ void addBook()
 
       case 9:
         cout << "Saving Book To Data Base" << endl;
+        bookPtr = new Book(bookTitle, isbn, author, publisher, dateAdded, quantityOnHand, wholesaleCost, retailPrice);
+        bookList.push_back(*bookPtr);
+        bookTree.insert(*bookPtr);
         Book::incrementBookCount();
         break;
 
@@ -271,25 +264,216 @@ void addBook()
 }
 
 
-void editBook()
+
+void editBook(list<Book>& bookList, AvlTree& bookTree)
 {
+  time_t now = time(0);
+  char*dt = ctime(&now);
+
+
+  Book* editBook;
+
+
   system("clear");
-  cout << "Serendipity Book Sellers" << endl << endl;
+  cout << "Serendipity Book Sellers" << endl;
+  cout << "Date and Time: " << dt << endl;
+  cout << endl << endl;
 
   cout << "Edit Book" << endl;
 
+  editBook = searchBook(bookList, bookTree);
 
-  cin.ignore(1000, '\n');
-  cin.get();
+  if (editBook != nullptr)
+  {
+    editBookMenu(bookList, editBook);
+
+  }
+  else
+  {
+    cout << "Book Not Found" << endl;
+  }
 }
 
 
-void deleteBook()
+
+void editBookMenu(list<Book>& bookList, Book* editBook)
 {
+  int selection = 0;
+  string bookTitle = editBook->getBookTitle();
+  string isbn = editBook->getIsbn();
+  string author = editBook->getAuthor();
+  string publisher = editBook->getPublisher();
+  string dateAdded = editBook->getDateAdded();
+  int quantityOnHand = editBook->getQuantityOnHand();
+  double wholesaleCost = editBook->getWholesaleCost();
+  double retailPrice = editBook->getRetailPrice();
+
+  Book* replaceBook = nullptr;
+
+  time_t now = time(0);
+  char*dt = ctime(&now);
+
+  do
+  {
+    system("clear");
+    cout << "Serendipity Book Sellers" << endl;
+    cout << "Date and Time: " << dt << endl;
+    cout << endl << endl;
+
+
+    cout << "Edit Book" << endl << endl;
+
+    cout << " 1. Edit Book Title: " << bookTitle << endl;
+    cout << " 2. Edit ISBN: " << isbn << endl;
+    cout << " 3. Edit Author: " << author << endl;
+    cout << " 4. Edit Publisher: " << publisher << endl;
+    cout << " 5. Edit Date Added (mm/dd/yyyy): " << dateAdded << endl;
+    cout << " 6. Edit Quantity on Hand: " << quantityOnHand << endl;
+    cout << " 7. Edit Wholesale Cost: " << wholesaleCost << endl;
+    cout << " 8. Edit Retail Price: " << retailPrice << endl;
+    cout << " 9. Save Changes" << endl;
+    cout << " 0. Return to Inventory Menu" << endl;
+    cout << endl;
+
+
+    cout << "Enter Selection: ";
+    cin >> selection;
+
+    while (selection < 0 || selection > 9 || cin.fail())
+    {
+      cin.clear();
+      cin.ignore(1000, '\n');
+      cout << "Please Enter Selection (0 - 9): ";
+      cin >> selection;
+    }
+    cout << endl << endl;
+
+
+    switch (selection)
+    {
+      case 1:
+        cin.ignore(1000, '\n');
+        cout << "Enter Book Title: ";
+        getline(cin, bookTitle, '\n');
+        break;
+
+      case 2:
+        cin.ignore(1000, '\n');
+        cout << "Enter ISBN: ";
+        getline(cin, isbn, '\n');
+        break;
+
+      case 3:
+        cin.ignore(1000, '\n');
+        cout << "Enter Author: ";
+        getline(cin, author, '\n');
+        break;
+
+      case 4:
+        cin.ignore(1000, '\n');
+        cout << "Enter Publisher: ";
+        getline(cin, publisher, '\n');
+        break;
+
+      case 5:
+        cin.ignore(1000, '\n');
+        cout << "Enter Date Added (mm/dd/yyy): ";
+        getline(cin, dateAdded, '\n');
+        break;
+
+      case 6:
+        cout << "Enter Quantity on Hand: ";
+        cin >> quantityOnHand;
+        break;
+
+      case 7:
+        cout << "Enter Wholesale Cost: $ ";
+        cin >> wholesaleCost;
+        break;
+
+      case 8:
+        cout << "Enter Retail Price: $ ";
+        cin >> retailPrice;
+        break;
+
+      case 9:
+        cout << "Saving Changes" << endl;
+        editBook->setBookTitle(bookTitle);
+        editBook->setIsbn(isbn);
+        editBook->setAuthor(author);
+        editBook->setPublisher(publisher);
+        editBook->setDateAdded(dateAdded);
+        editBook->setQuantityOnHand(quantityOnHand);
+        editBook->setWholesaleCost(wholesaleCost);
+        editBook->setRetailPrice(retailPrice);
+
+        replaceBook = new Book(*editBook);
+
+        bookList.remove(*editBook);
+        bookList.push_back(*replaceBook);
+        delete editBook;
+
+        cout << "Please Press Enter To Continue..." << endl;
+        cin.ignore(1000, '\n');
+        cin.get();
+        break;
+
+      case 0:
+        cout << "Returning to Inventory Menu" << endl;
+        cout << "Please Press Enter To Continue..." << endl;
+        break;
+
+      default:
+        cout << "Something went wrong" << endl;
+    }
+
+  } while (selection != 0);
+
+}
+
+
+void deleteBook(list<Book>& bookList, AvlTree& bookTree)
+{
+  time_t now = time(0);
+  char*dt = ctime(&now);
+
+  char toDelete;
+
+
+
   system("clear");
-  cout << "Serendipity Book Sellers" << endl << endl;
+  cout << "Serendipity Book Sellers" << endl;
+  cout << "Date and Time: " << dt << endl;
+  cout << endl << endl;
 
   cout << "Delete Book" << endl;
+
+  Book* deleteBook = searchBook(bookList, bookTree);
+
+  if (deleteBook != nullptr)
+  {
+    deleteBook->print();
+    cout << endl << endl;
+
+
+    do
+    {
+      cout << "Are You Sure You Want To Delete This Book? (Y/N): ";
+      cin >> toDelete;
+    } while (toDelete != 'y' && toDelete != 'Y' && toDelete != 'n' && toDelete != 'N');
+
+
+    if (toDelete == 'y' || toDelete == 'Y')
+    {
+      bookList.remove(*deleteBook);
+      delete deleteBook;
+    }
+
+  }
+  else
+  {
+    cout << "Book Not Found" << endl;
+  }
 
 
   cin.ignore(1000, '\n');

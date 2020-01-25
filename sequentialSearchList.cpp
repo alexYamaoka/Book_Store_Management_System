@@ -1,10 +1,11 @@
 #include "sequentialSearchList.h"
 using namespace std;
 
-Book* sequentialSearch(list<Book>& bookList, const Book& searchItem) throw(string)
+Book* sequentialSearch(list<Book>& bookList, const Book& searchItem)
 {
   list<Book>::iterator it;
-
+  bool isFound = false;
+  char selection;
 
 
   string searchTitle = searchItem.getBookTitle();
@@ -52,17 +53,43 @@ Book* sequentialSearch(list<Book>& bookList, const Book& searchItem) throw(strin
 
     if ((tempTitle.find(searchTitle) != string::npos) ||  (tempIsbn.find(searchIsbn) != string::npos))
     {
-      cout << "Item Found" << endl;
-      cout << it->getBookTitle() << endl;
+      cout << endl << endl;
+      cout << "<Book Found>" << endl << endl;
+      cout << left;
+      cout << setw(15) << "Title: " << it->getBookTitle() << endl;
+      cout << setw(15) << "ISBN: " << it->getIsbn() << endl;
+      cout << setw(15) << "Author: " << it->getAuthor() << endl;
+      cout << setw(15) << "Publisher: " << it->getPublisher() << endl;
+      cout << setw(15) << "retailPrice: " << it->getRetailPrice() << endl;
+      cout << setw(15) << "Qty: " << it->getQuantityOnHand() << endl;
+      cout << right << endl;
 
-      Book* tempBook = new Book(*it);
-      return tempBook;
+      do
+      {
+        cout << "Is This The Book You Were Looking For? (Y/N): ";
+        cin >> selection;
+
+        if (selection == 'y' || selection == 'Y')
+        {
+          isFound = true;
+        }
+
+      } while (selection != 'y' && selection != 'Y' && selection != 'n' && selection != 'N');
+
+
+
+      if (isFound)
+      {
+        Book* tempBook = new Book(*it);
+        return tempBook;
+      }
+
+
     }
 
   }
 
-  //string ex = "Item Not Found";
-  //throw (ex);
+
 
   return nullptr;
 }

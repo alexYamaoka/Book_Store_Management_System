@@ -151,6 +151,7 @@ double Book::getRetailPrice() const
 
 void Book::print()
 {
+  cout << fixed << setprecision(2);
   cout << "Book Title: " << bookTitle << endl;
   cout << "ISBN: " << isbn << endl;
   cout << "Author: " << author << endl;

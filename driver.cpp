@@ -23,8 +23,8 @@ int main()
   AvlTree bookTree;
 
   readInDataBase(bookList, bookTree);
-  testBookList(bookList);
-  testBookTree(bookTree);
+  //testBookList(bookList);
+  //testBookTree(bookTree);
 
 
 
@@ -32,12 +32,15 @@ int main()
 
   do
   {
+    system("clear");
+
+    
     selection = mainMenu();
 
     switch(selection)
     {
       case 1:
-        cashierMenu();
+        cashierMenu(bookList, bookTree);
         break;
 
       case 2:
