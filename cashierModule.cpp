@@ -5,6 +5,7 @@ void cashierMenu(list<Book>& bookList, AvlTree& bookTree)
 
   int selection = 0;
   list<Book> shoppingCart;
+  bool isComplete = false;
 
 
 
@@ -25,9 +26,8 @@ void cashierMenu(list<Book>& bookList, AvlTree& bookTree)
     cout << "**************************************" << endl;
     cout << "* 1. Add Book To Cart                *" << endl;
     cout << "* 2. Remove Book From Cart           *" << endl;
-    cout << "* 3. Edit Item                       *" << endl;
-    cout << "* 4. Proceed To Check Out            *" << endl;
-    cout << "* 5. Return to Main Menu             *" << endl;
+    cout << "* 3. Proceed To Check Out            *" << endl;
+    cout << "* 4. Return to Main Menu             *" << endl;
     cout << "**************************************" << endl;
     cout << endl << endl << endl << endl;
 
@@ -62,15 +62,14 @@ void cashierMenu(list<Book>& bookList, AvlTree& bookTree)
         break;
 
       case 3:
-        editItem(bookList, bookTree, shoppingCart);
-
+        isComplete = checkOutCart(bookList, bookTree, shoppingCart);
+        if (isComplete)
+        {
+          selection = 4;
+        }
         break;
 
       case 4:
-        checkOutCart(bookList, bookTree, shoppingCart);
-        break;
-
-      case 5:
         cout << "Returning to Main Menu" << endl;
         break;
 
@@ -85,7 +84,7 @@ void cashierMenu(list<Book>& bookList, AvlTree& bookTree)
 
 
 
-  } while (selection != 5);
+  } while (selection != 4);
 
 
 
@@ -102,33 +101,81 @@ void addBookToCart(list<Book>& bookList, AvlTree& bookTree, list<Book>& shopping
   int quantityToPurchase = 0;
 
 
-  Book* tempBook = searchBook(bookList, bookTree);
+  list<Book>::iterator it;
+  int qtyAlreadyInCart = 0;
+
+  Book* tempBook;
 
 
-  if (tempBook != nullptr)
+  tempBook = searchBook(bookList, bookTree);
+
+
+
+  if (tempBook == nullptr)
+  {
+    cout << "Book Was Not Found" << endl;
+    return;
+  }
+
+
+
+  if (!shoppingCart.empty())
+  {
+    for (it = shoppingCart.begin(); it != shoppingCart.end(); ++it)
+    {
+      if (*tempBook == *it)
+      {
+        qtyAlreadyInCart += it->getQuantityOnHand();
+      }
+    }
+  }
+
+
+  cout << endl << endl;
+  cout << "Quantity Currently In Cart: " << qtyAlreadyInCart << endl;
+
+  if (quantityToPurchase + qtyAlreadyInCart == tempBook->getQuantityOnHand())
+  {
+    cout << "The Mazimum Available Quantity Is Already In Cart" << endl;
+    quantityToPurchase = 0;
+  }
+  else
   {
     cout << "Enter quanity to purchase: ";
     cin >> quantityToPurchase;
 
-    while (quantityToPurchase > tempBook->getQuantityOnHand() || quantityToPurchase < 0 || cin.fail())
+    while (cin.fail() || quantityToPurchase < 0 || (quantityToPurchase + qtyAlreadyInCart > tempBook->getQuantityOnHand()))
     {
+      cin.clear();
+      cin.ignore(1000, '\n');
+
       cout << "Quantity to purchase is not available." << endl;
       cout << "Please enter a valid quantity: ";
       cin >> quantityToPurchase;
     }
 
-
-    tempBook->setQuantityOnHand(quantityToPurchase);
-    shoppingCart.push_back(*tempBook);
-
-  }
-  else
-  {
-    cout << "Book was not found" << endl;
   }
 
 
+
+
+  tempBook->setQuantityOnHand(quantityToPurchase);
+  shoppingCart.push_back(*tempBook);
+
+
+  cout << "Please Press Enter To Continue..." << endl;
+
+  cin.ignore(1000, '\n');
+  cin.get();
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -193,13 +240,7 @@ void removeBookFromCart(list<Book>& bookList, AvlTree& bookTree, list<Book>& sho
 
 
 
-void editItem(list<Book>& bookList, AvlTree& bookTree, list<Book>& shoppingCart)
-{
-
-}
-
-
-void checkOutCart(list<Book>& bookList, AvlTree& bookTree, list<Book>& shoppingCart)
+bool checkOutCart(list<Book>& bookList, AvlTree& bookTree, list<Book>& shoppingCart)
 {
   time_t now = time(0);
   char*dt = ctime(&now);
@@ -209,6 +250,7 @@ void checkOutCart(list<Book>& bookList, AvlTree& bookTree, list<Book>& shoppingC
   double subTotal = 0;
   double tax = 0.075;
   double grandTotal = 0;
+  bool isComplete = false;
 
   system("clear");
 
@@ -251,11 +293,17 @@ void checkOutCart(list<Book>& bookList, AvlTree& bookTree, list<Book>& shoppingC
   if (proceedCheckOut == 'y' || proceedCheckOut == 'Y')
   {
     completeTransaction(bookList, bookTree, shoppingCart);
+    cout << "Transaction Completed!" << endl;
+    isComplete = true;
   }
 
 
+  cout << "Please Press Enter To Continue..." << endl;
   cin.ignore(1000, '\n');
   cin.get();
+
+
+  return isComplete;
 }
 
 
@@ -284,6 +332,21 @@ void printCartItems(list<Book>& bookList, AvlTree& bookTree, list<Book>& shoppin
 
 void completeTransaction(list<Book>& bookList, AvlTree& bookTree, list<Book>& shoppingCart)
 {
-  
+  list<Book>::iterator itCart;
+
+  list<Book>::iterator itInventory;
+
+  for (itCart = shoppingCart.begin(); itCart != shoppingCart.end(); ++itCart)
+  {
+    for (itInventory = bookList.begin(); itInventory != bookList.end(); ++itInventory)
+    {
+      if (*itCart == *itInventory)
+      {
+        int qty = itInventory->getQuantityOnHand() - itCart->getQuantityOnHand();
+        itInventory->setQuantityOnHand(qty);
+      }
+
+    }
+  }
 
 }
