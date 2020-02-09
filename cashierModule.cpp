@@ -161,6 +161,7 @@ void addBookToCart(list<Book>& bookList, AvlTree& bookTree, list<Book>& shopping
 
   tempBook->setQuantityOnHand(quantityToPurchase);
   shoppingCart.push_back(*tempBook);
+  delete tempBook;
 
 
   cout << "Please Press Enter To Continue..." << endl;
@@ -297,6 +298,8 @@ bool checkOutCart(list<Book>& bookList, AvlTree& bookTree, list<Book>& shoppingC
     isComplete = true;
   }
 
+
+  shoppingCart.clear();
 
   cout << "Please Press Enter To Continue..." << endl;
   cin.ignore(1000, '\n');

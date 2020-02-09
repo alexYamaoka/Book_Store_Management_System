@@ -34,7 +34,7 @@ int main()
   {
     system("clear");
 
-    
+
     selection = mainMenu();
 
     switch(selection)
@@ -62,7 +62,9 @@ int main()
   }while(selection != 4);
 
 
-  return 0;
+  bookList.clear();
+  exit(0);
+  //return 0;
 }
 
 
@@ -108,9 +110,11 @@ void readInDataBase(list<Book>& bookList, AvlTree& bookTree)
 
   bookPtr = new Book(bookTitle, isbn, author, publisher, dateAdded, quantityOnHand, wholesaleCost, retailPrice);
   bookList.push_back(*bookPtr);
-  bookTree.insert(*bookPtr);
+  //bookTree.insert(*bookPtr);
   Book::incrementBookCount();
   count++;
+
+  delete bookPtr;
 
 
   while (!fin.fail())
@@ -131,9 +135,11 @@ void readInDataBase(list<Book>& bookList, AvlTree& bookTree)
     {
       bookPtr = new Book(bookTitle, isbn, author, publisher, dateAdded, quantityOnHand, wholesaleCost, retailPrice);
       bookList.push_back(*bookPtr);
-      bookTree.insert(*bookPtr);
+      //bookTree.insert(*bookPtr);
       Book::incrementBookCount();
       count++;
+
+      delete bookPtr;
     }
   }
 

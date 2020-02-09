@@ -90,8 +90,9 @@ void inventoryMenu(list<Book>& bookList, AvlTree& bookTree)
     }
 
 
-
   } while (selection != 5);
+
+
 }
 
 
@@ -120,10 +121,14 @@ Book* searchBook(list<Book>& bookList, AvlTree& bookTree)
   // ***************** List data structure **********************
   retreivedBook = sequentialSearch(bookList, *tempBook);
 
+  delete tempBook;
+
   if (retreivedBook != nullptr)
   {
     return retreivedBook;
   }
+
+
 
 
   return nullptr;
@@ -242,6 +247,7 @@ void addBook(list<Book>& bookList, AvlTree& bookTree)
         bookList.push_back(*bookPtr);
         bookTree.insert(*bookPtr);
         Book::incrementBookCount();
+        delete bookPtr;
         break;
 
       case 0:
@@ -291,7 +297,9 @@ void editBook(list<Book>& bookList, AvlTree& bookTree)
   else
   {
     cout << "Book Not Found" << endl;
+    delete editBook;
   }
+
 }
 
 
@@ -307,6 +315,7 @@ void editBookMenu(list<Book>& bookList, Book* editBook)
   int quantityOnHand = editBook->getQuantityOnHand();
   double wholesaleCost = editBook->getWholesaleCost();
   double retailPrice = editBook->getRetailPrice();
+  bool bookSaved = false;
 
   Book* replaceBook = nullptr;
 
@@ -397,6 +406,7 @@ void editBookMenu(list<Book>& bookList, Book* editBook)
         break;
 
       case 9:
+        bookSaved = true;
         cout << "Saving Changes" << endl;
         editBook->setBookTitle(bookTitle);
         editBook->setIsbn(isbn);
@@ -412,10 +422,12 @@ void editBookMenu(list<Book>& bookList, Book* editBook)
         bookList.remove(*editBook);
         bookList.push_back(*replaceBook);
         delete editBook;
+        delete replaceBook;
 
         cout << "Please Press Enter To Continue..." << endl;
         cin.ignore(1000, '\n');
         cin.get();
+        return;
         break;
 
       case 0:
@@ -428,6 +440,7 @@ void editBookMenu(list<Book>& bookList, Book* editBook)
     }
 
   } while (selection != 0);
+
 
 }
 
@@ -473,6 +486,7 @@ void deleteBook(list<Book>& bookList, AvlTree& bookTree)
   else
   {
     cout << "Book Not Found" << endl;
+    delete deleteBook;
   }
 
 
